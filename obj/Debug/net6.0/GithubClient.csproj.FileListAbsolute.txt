@@ -1,6 +1,7 @@
 C:\Users\JeffreyPatton\source\repos\GithubClient\bin\Debug\net6.0\GithubClient.deps.json
 C:\Users\JeffreyPatton\source\repos\GithubClient\bin\Debug\net6.0\GithubClient.dll
 C:\Users\JeffreyPatton\source\repos\GithubClient\bin\Debug\net6.0\GithubClient.pdb
+C:\Users\JeffreyPatton\source\repos\GithubClient\bin\Debug\net6.0\GithubClient.xml
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.csproj.AssemblyReference.cache
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.AssemblyInfoInputs.cache
@@ -8,7 +9,6 @@ C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.A
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.csproj.CoreCompileInputs.cache
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.dll
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\refint\GithubClient.dll
+C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.xml
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.pdb
 C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\ref\GithubClient.dll
-C:\Users\JeffreyPatton\source\repos\GithubClient\bin\Debug\net6.0\GithubClient.xml
-C:\Users\JeffreyPatton\source\repos\GithubClient\obj\Debug\net6.0\GithubClient.xml
