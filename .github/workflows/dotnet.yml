@@ -29,6 +29,6 @@ jobs:
       with: 
         PROJECT_FILE_PATH: 'GithubClient.csproj'
         PACKAGE_NAME: GithubClient
-        VERSION_REGEX: '*'
+        VERSION_REGEX: '^\s*<Version>(.*)<\/Version>\s*$'
         TAG_FORMAT: '*'
         NUGET_KEY: ${{secrets.nuget}}
