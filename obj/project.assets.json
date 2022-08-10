@@ -14,7 +14,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\JeffreyPatton\\source\\repos\\GithubClient\\GithubClient.csproj",
-      "projectName": "GithubClient",
+      "projectName": "Patton.GithubClient",
       "projectPath": "C:\\Users\\JeffreyPatton\\source\\repos\\GithubClient\\GithubClient.csproj",
       "packagesPath": "C:\\Users\\JeffreyPatton\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\JeffreyPatton\\source\\repos\\GithubClient\\obj\\",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
