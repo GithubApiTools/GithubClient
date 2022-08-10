@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GithubClient</name>
+    </assembly>
+    <members>
+        <member name="T:GithubClient.Blobs.Methods">
+            <summary>
+            A Collection of methods for working with Blob objects in the Github API
+            </summary>
+        </member>
+        <member name="M:GithubClient.Blobs.Methods.GetBlob(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a blob object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blob</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Sha">Secure hashing algorithm</param>
+            <returns>A blob object</returns>
+        </member>
+        <member name="M:GithubClient.Blobs.Methods.GetBlob(System.String,System.String,GithubClient.Models.DirectoryContent)">
+            <summary>
+            Returns a blob object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blob</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="content">The contents of a file or directory in a repository.</param>
+            <returns>A blob object</returns>
+        </member>
+        <member name="M:GithubClient.Blobs.Methods.GetBlob(System.String,System.String,GithubClient.Models.Tree)">
+            <summary>
+            Returns a blob object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blob</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="tree">Object specifying a tree structure.</param>
+            <returns>A blob object</returns>
+        </member>
+        <member name="T:GithubClient.Contents.Methods">
+            <summary>
+            A Collection of methods for working with Content objects in the Github API
+            </summary>
+        </member>
+        <member name="M:GithubClient.Contents.Methods.GetContents(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a content object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/contents#get-repository-content">Github Docs : Contents</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <returns>A DirectoryContent object</returns>
+        </member>
+        <member name="M:GithubClient.Contents.Methods.GetContents(System.String,System.String,GithubClient.Models.Repository,System.String)">
+            <summary>
+            Returns a content object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/contents#get-repository-content">Github Docs : Contents</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="repository">A Repository object</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <returns>A DirectoryContent object</returns>
+        </member>
+        <member name="M:GithubClient.Contents.Methods.GetContents(System.String,System.String,GithubClient.Models.DirectoryContent,System.String)">
+            <summary>
+            Returns a content object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/contents#get-repository-content">Github Docs : Contents</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="content">A DirectoryContent object</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <returns>A DirectoryContent object</returns>
+        </member>
+        <member name="M:GithubClient.Contents.Methods.GetFile(System.String,System.String,GithubClient.Models.DirectoryContent)">
+            <summary>
+            Returns a content object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/contents#get-repository-content">Github Docs : Contents</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="content">A DirectoryContent object</param>
+            <returns>A FileContent object</returns>
+        </member>
+        <member name="T:GithubClient.Repositories.Methods">
+            <summary>
+            A Collection of methods for working with Repository objects in the Github API
+            </summary>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetRepositories(System.String,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetRepositories(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="PerPage">The number of results per page (max 100).</param>
+            <param name="Page">Page number of the results to fetch</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetRepositories(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="PerPage">The number of results per page (max 100).</param>
+            <param name="Page">Page number of the results to fetch</param>
+            <param name="Type">Specifies the types of repositories you want returned.</param>
+            <param name="Direction">The order to sort by. Default: asc</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetRepository(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <returns>A repository object</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetOrgRepositories(System.String,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetOrgRepositories(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="PerPage">The number of results per page (max 100).</param>
+            <param name="Page">Page number of the results to fetch</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetOrgRepositories(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="PerPage">The number of results per page (max 100).</param>
+            <param name="Page">Page number of the results to fetch</param>
+            <param name="Type">Specifies the types of repositories you want returned.</param>
+            <param name="Direction">The order to sort by. Default: asc</param>
+            <returns>A collection of repository objects</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Methods.GetOrgRepository(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a repository object from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <returns>A repository object</returns>
+        </member>
+        <member name="T:GithubClient.Trees.Methods">
+            <summary>
+            A Collection of methods for working with Tree objects in the Github API
+            </summary>
+        </member>
+        <member name="M:GithubClient.Trees.Methods.GetTree(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a repository Tree from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <returns>A tree object</returns>
+        </member>
+        <member name="M:GithubClient.Trees.Methods.GetTree(System.String,System.String,GithubClient.Models.Repository,System.String,System.Boolean)">
+            <summary>
+            Returns a repository Tree from the Github API
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
+            <param name="PAT">Personal Access Token</param>
+            <param name="GithubUrl">Github API Url</param>
+            <param name="repository">A Repository object</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <param name="Recursive">Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in :tree_sha</param>
+            <returns>A tree object</returns>
+        </member>
+    </members>
+</doc>
