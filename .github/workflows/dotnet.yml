@@ -31,4 +31,4 @@ jobs:
         PACKAGE_NAME: GithubClient
         VERSION_REGEX: '^\s*<Version>(.*)<\/Version>\s*$'
         TAG_FORMAT: '*'
-        NUGET_KEY: ${{secrets.nuget}}
+        NUGET_KEY: ${{secrets.NUGET}}
