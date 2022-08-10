@@ -10,6 +10,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/jeffpatton1971/GithubClient</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <Authors>Jeffrey Patton</Authors>
+    <Copyright>2022</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
