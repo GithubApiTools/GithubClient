@@ -1,0 +1,36 @@
+#### [GithubClient](index.md 'index')
+### [GithubClient.Contents](GithubClient.Contents.md 'GithubClient.Contents').[Methods](GithubClient.Contents.Methods.md 'GithubClient.Contents.Methods')
+
+## Methods.GetFile(string, string, DirectoryContent) Method
+
+Returns a content object from the Github API
+
+```csharp
+public static System.Threading.Tasks.Task<object> GetFile(string PAT, string GithubUrl, GithubClient.Models.DirectoryContent content);
+```
+#### Parameters
+
+<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
+
+`PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+Personal Access Token
+
+<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
+
+`GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+Github API Url
+
+<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).content'></a>
+
+`content` [GithubClient.Models.DirectoryContent](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
+
+A DirectoryContent object
+
+#### Returns
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
+A FileContent object
+
+### See Also
+- [Github Docs : Contents](https://docs.github.com/en/rest/repos/contents#get-repository-content 'https://docs.github.com/en/rest/repos/contents#get-repository-content')
