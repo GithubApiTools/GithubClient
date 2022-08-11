@@ -8,12 +8,13 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/jeffpatton1971/GithubClient</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/jeffpatton1971/GithubClient</PackageProjectUrl>
+    <PackageProjectUrl>https://jeffpatton1971.github.io/GithubClient/</PackageProjectUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Authors>Jeffrey Patton</Authors>
-    <Copyright>2022</Copyright>
+    <Copyright>Copyright 2022</Copyright>
     <Version>1.1.0</Version>
     <PackageId>Patton.$(AssemblyName)</PackageId>
+    <PackageTags>Github; GithubApi</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
