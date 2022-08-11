@@ -1,1 +1,8 @@
+title: GithubClient
+email: jeffrey@patton-tech.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A C# Dll library for working with the Github Rest API
+#baseurl: "/pattontech" # the subpath of your site, e.g. /blog
+url: "https://jeffpatton1971.github.io/GithubClient/" # the base hostname & protocol for your site, e.g. http://example.com
+author: "Jeffrey S. Patton"
 theme: jekyll-theme-slate
