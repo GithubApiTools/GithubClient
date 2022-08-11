@@ -24,12 +24,12 @@ Github API Url
 
 <a name='GithubClient.Blobs.Methods.GetBlob(string,string,GithubClient.Models.Tree).tree'></a>
 
-`tree` [GithubClient.Models.Tree](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.Tree 'GithubClient.Models.Tree')
+`tree` [Tree](GithubClient.Models.Tree 'GithubClient.Models.Tree')
 
 Object specifying a tree structure.
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[GithubClient.Models.Blob](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.Blob 'GithubClient.Models.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Models.Blob 'GithubClient.Models.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A blob object
 
 ### See Also

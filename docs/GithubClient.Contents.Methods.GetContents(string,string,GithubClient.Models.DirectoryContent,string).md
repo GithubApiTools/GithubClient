@@ -24,7 +24,7 @@ Github API Url
 
 <a name='GithubClient.Contents.Methods.GetContents(string,string,GithubClient.Models.DirectoryContent,string).content'></a>
 
-`content` [GithubClient.Models.DirectoryContent](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
+`content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
 
 A DirectoryContent object
 
@@ -35,7 +35,7 @@ A DirectoryContent object
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[GithubClient.Models.DirectoryContent](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A DirectoryContent object
 
 ### See Also

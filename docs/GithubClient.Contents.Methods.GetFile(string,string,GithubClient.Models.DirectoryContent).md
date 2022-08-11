@@ -24,7 +24,7 @@ Github API Url
 
 <a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).content'></a>
 
-`content` [GithubClient.Models.DirectoryContent](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
+`content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
 
 A DirectoryContent object
 

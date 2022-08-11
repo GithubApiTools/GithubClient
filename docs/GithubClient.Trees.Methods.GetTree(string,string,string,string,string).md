@@ -41,7 +41,7 @@ The name of the repository. The name is not case sensitive.
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[GithubClient.Models.TreeRoot](https://docs.microsoft.com/en-us/dotnet/api/GithubClient.Models.TreeRoot 'GithubClient.Models.TreeRoot')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[TreeRoot](GithubClient.Models.TreeRoot 'GithubClient.Models.TreeRoot')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A tree object
 
 ### See Also
