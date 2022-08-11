@@ -3,12 +3,12 @@ using System.Net.Http.Headers;
 using GithubClient.Models;
 using System.Text;
 
-namespace GithubClient.Contents
+namespace GithubClient.Methods
 {
     /// <summary>
     /// A Collection of methods for working with Content objects in the Github API
     /// </summary>
-    public class Methods
+    public class Content
     {
         /// <summary>
         /// Returns a content object from the Github API
@@ -103,7 +103,7 @@ namespace GithubClient.Contents
             {
                 string RequestUrl = content.DownloadUrl;
                 Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
-                return  (await Response);
+                return await Response;
             }
             else
             {

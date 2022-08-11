@@ -2,12 +2,12 @@
 using System.Net.Http.Headers;
 using GithubClient.Models;
 
-namespace GithubClient.Repositories
+namespace GithubClient.Methods
 {
     /// <summary>
     /// A Collection of methods for working with Repository objects in the Github API
     /// </summary>
-    public class Methods
+    public class Repos
     {
         /// <summary>
         /// Returns a repository object from the Github API

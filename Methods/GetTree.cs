@@ -2,12 +2,12 @@
 using System.Net.Http.Headers;
 using GithubClient.Models;
 
-namespace GithubClient.Trees
+namespace GithubClient.Methods
 {
     /// <summary>
     /// A Collection of methods for working with Tree objects in the Github API
     /// </summary>
-    public class Methods
+    public class Trees
     {
         /// <summary>
         /// Returns a repository Tree from the Github API

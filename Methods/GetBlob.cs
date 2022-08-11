@@ -2,12 +2,12 @@
 using System.Net.Http.Headers;
 using GithubClient.Models;
 
-namespace GithubClient.Blobs
+namespace GithubClient.Methods
 {
     /// <summary>
     /// A Collection of methods for working with Blob objects in the Github API
     /// </summary>
-    public class Methods
+    public class Blobs
     {
         /// <summary>
         /// Returns a blob object from the Github API
