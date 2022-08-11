@@ -21,7 +21,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/repos/" + Owner;
@@ -42,7 +42,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/repos/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page;
@@ -65,7 +65,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/repos/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page + "&type=" + Type + "&direction=" + Direction;
@@ -85,7 +85,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/repos/" + Owner + "/" + Name;
@@ -104,7 +104,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/orgs/" + Org + "/repos";
@@ -125,7 +125,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/orgs/" + Org + "/repos?per_page=" + PerPage + "&page=" + Page;
@@ -148,7 +148,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/orgs/" + Org + "/repos?per_page=" + PerPage + "&page=" + Page + "&type=" + Type + "&direction=" + Direction;
@@ -168,7 +168,7 @@ namespace GithubClient.Methods
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             string RequestUrl = GithubUrl + "/repos/" + Org + "/" + Name;
