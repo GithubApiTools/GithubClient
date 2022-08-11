@@ -8,7 +8,7 @@ namespace GithubClient.Methods
     /// <summary>
     /// A Collection of methods for working with Content objects in the Github API
     /// </summary>
-    public class Content
+    public class Contents
     {
         /// <summary>
         /// Returns a content object from the Github API

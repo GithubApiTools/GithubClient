@@ -7,7 +7,7 @@ namespace GithubClient.Models
     /// </summary>
     /// 
     /// <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
-    public class TreeRoot
+    public class BaseTree
     {
         /// <summary>
         /// The object's SHA-1 hash

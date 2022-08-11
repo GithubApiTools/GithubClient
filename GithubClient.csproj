@@ -36,11 +36,4 @@ Added GetHeader to each class to return the default header</PackageReleaseNotes>
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Blobs\" />
-    <Folder Include="Contents\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Trees\" />
-  </ItemGroup>
-
 </Project>
