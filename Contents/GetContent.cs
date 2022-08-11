@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using System.Net.Http.Headers;
 using GithubClient.Models;
+using System.Text;
 
 namespace GithubClient.Contents
 {
@@ -91,7 +92,7 @@ namespace GithubClient.Contents
         /// <param name="GithubUrl">Github API Url</param>
         /// <param name="content">A DirectoryContent object</param>
         /// <returns>A FileContent object</returns>
-        public static async Task<FileContent> GetFile(string PAT, string GithubUrl, DirectoryContent content)
+        public static async Task<object> GetFile(string PAT, string GithubUrl, DirectoryContent content)
         {
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GithubUrl);
@@ -102,11 +103,11 @@ namespace GithubClient.Contents
             {
                 string RequestUrl = content.DownloadUrl;
                 Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
-                return JsonSerializer.Deserialize<FileContent>(await Response);
+                return  (await Response);
             }
             else
             {
-                return new FileContent();
+                return null;
             }
         }
     }
