@@ -12,11 +12,14 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <Authors>Jeffrey Patton</Authors>
     <Copyright>Copyright 2022</Copyright>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <PackageId>Patton.$(AssemblyName)</PackageId>
     <PackageTags>Github; GithubApi</PackageTags>
     <RepositoryType>git</RepositoryType>
     <DocumentationFile>C:\Users\JeffreyPatton\source\repos\GithubClient\docs\GithubClient.xml</DocumentationFile>
+    <Description>A C# Dll library for working with the Github Rest API</Description>
+    <PackageReleaseNotes>Updated documentation
+Added GetHeader to each class to return the default header</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
