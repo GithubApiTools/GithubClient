@@ -1,7 +1,7 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[TreeRoot](GithubClient.Models.TreeRoot 'GithubClient.Models.TreeRoot')
+### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[BaseTree](GithubClient.Models.BaseTree 'GithubClient.Models.BaseTree')
 
-## TreeRoot.Truncated Property
+## BaseTree.Truncated Property
 
 ```csharp
 public bool Truncated { get; set; }

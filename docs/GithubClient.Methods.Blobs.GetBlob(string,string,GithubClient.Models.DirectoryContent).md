@@ -1,7 +1,7 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Blobs](GithubClient.Blobs 'GithubClient.Blobs').[Methods](GithubClient.Blobs.Methods 'GithubClient.Blobs.Methods')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs 'GithubClient.Methods.Blobs')
 
-## Methods.GetBlob(string, string, DirectoryContent) Method
+## Blobs.GetBlob(string, string, DirectoryContent) Method
 
 Returns a blob object from the Github API
 
@@ -10,19 +10,19 @@ public static System.Threading.Tasks.Task<GithubClient.Models.Blob> GetBlob(stri
 ```
 #### Parameters
 
-<a name='GithubClient.Blobs.Methods.GetBlob(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
+<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Blobs.Methods.GetBlob(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
+<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
 
 `GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Github API Url
 
-<a name='GithubClient.Blobs.Methods.GetBlob(string,string,GithubClient.Models.DirectoryContent).content'></a>
+<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).content'></a>
 
 `content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
 

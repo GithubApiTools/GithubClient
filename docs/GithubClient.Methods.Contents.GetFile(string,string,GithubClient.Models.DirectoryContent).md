@@ -1,7 +1,7 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Contents](GithubClient.Contents 'GithubClient.Contents').[Methods](GithubClient.Contents.Methods 'GithubClient.Contents.Methods')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents 'GithubClient.Methods.Contents')
 
-## Methods.GetFile(string, string, DirectoryContent) Method
+## Contents.GetFile(string, string, DirectoryContent) Method
 
 Returns a content object from the Github API
 
@@ -10,19 +10,19 @@ public static System.Threading.Tasks.Task<object> GetFile(string PAT, string Git
 ```
 #### Parameters
 
-<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
+<a name='GithubClient.Methods.Contents.GetFile(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
+<a name='GithubClient.Methods.Contents.GetFile(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
 
 `GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Github API Url
 
-<a name='GithubClient.Contents.Methods.GetFile(string,string,GithubClient.Models.DirectoryContent).content'></a>
+<a name='GithubClient.Methods.Contents.GetFile(string,string,GithubClient.Models.DirectoryContent).content'></a>
 
 `content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
 

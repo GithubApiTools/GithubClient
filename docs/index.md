@@ -4,8 +4,5 @@
 
 | Namespaces | |
 | :--- | :--- |
-| [GithubClient.Blobs](GithubClient.Blobs 'GithubClient.Blobs') | |
-| [GithubClient.Contents](GithubClient.Contents 'GithubClient.Contents') | |
+| [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods') | |
 | [GithubClient.Models](GithubClient.Models 'GithubClient.Models') | |
-| [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories') | |
-| [GithubClient.Trees](GithubClient.Trees 'GithubClient.Trees') | |

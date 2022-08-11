@@ -1,34 +1,34 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Contents](GithubClient.Contents 'GithubClient.Contents').[Methods](GithubClient.Contents.Methods 'GithubClient.Contents.Methods')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents 'GithubClient.Methods.Contents')
 
-## Methods.GetContents(string, string, Repository, string) Method
+## Contents.GetContents(string, string, DirectoryContent, string) Method
 
 Returns a content object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>> GetContents(string PAT, string GithubUrl, GithubClient.Models.Repository repository, string Ref="main");
+public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>> GetContents(string PAT, string GithubUrl, GithubClient.Models.DirectoryContent content, string Ref="main");
 ```
 #### Parameters
 
-<a name='GithubClient.Contents.Methods.GetContents(string,string,GithubClient.Models.Repository,string).PAT'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Contents.Methods.GetContents(string,string,GithubClient.Models.Repository,string).GithubUrl'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).GithubUrl'></a>
 
 `GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Github API Url
 
-<a name='GithubClient.Contents.Methods.GetContents(string,string,GithubClient.Models.Repository,string).repository'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).content'></a>
 
-`repository` [Repository](GithubClient.Models.Repository 'GithubClient.Models.Repository')
+`content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
 
-A Repository object
+A DirectoryContent object
 
-<a name='GithubClient.Contents.Methods.GetContents(string,string,GithubClient.Models.Repository,string).Ref'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).Ref'></a>
 
 `Ref` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 

@@ -1,7 +1,7 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[TreeRoot](GithubClient.Models.TreeRoot 'GithubClient.Models.TreeRoot')
+### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[BaseTree](GithubClient.Models.BaseTree 'GithubClient.Models.BaseTree')
 
-## TreeRoot.Sha Property
+## BaseTree.Sha Property
 
 The object's SHA-1 hash
 

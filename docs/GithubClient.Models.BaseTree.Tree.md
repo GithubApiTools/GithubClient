@@ -1,7 +1,7 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[TreeRoot](GithubClient.Models.TreeRoot 'GithubClient.Models.TreeRoot')
+### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[BaseTree](GithubClient.Models.BaseTree 'GithubClient.Models.BaseTree')
 
-## TreeRoot.Tree Property
+## BaseTree.Tree Property
 
 A collection of Tree objects
 

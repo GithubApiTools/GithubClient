@@ -6,7 +6,7 @@
 A method to return the default header
 
 ```csharp
-public string GetHeader();
+public static string GetHeader();
 ```
 
 #### Returns

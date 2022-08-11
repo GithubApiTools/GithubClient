@@ -1,34 +1,34 @@
 #### [GithubClient](index 'index')
-### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[Methods](GithubClient.Repositories.Methods 'GithubClient.Repositories.Methods')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Repos](GithubClient.Methods.Repos 'GithubClient.Methods.Repos')
 
-## Methods.GetRepository(string, string, string, string) Method
+## Repos.GetOrgRepository(string, string, string, string) Method
 
 Returns a repository object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.Repository> GetRepository(string PAT, string GithubUrl, string Owner, string Name);
+public static System.Threading.Tasks.Task<GithubClient.Models.Repository> GetOrgRepository(string PAT, string GithubUrl, string Org, string Name);
 ```
 #### Parameters
 
-<a name='GithubClient.Repositories.Methods.GetRepository(string,string,string,string).PAT'></a>
+<a name='GithubClient.Methods.Repos.GetOrgRepository(string,string,string,string).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Repositories.Methods.GetRepository(string,string,string,string).GithubUrl'></a>
+<a name='GithubClient.Methods.Repos.GetOrgRepository(string,string,string,string).GithubUrl'></a>
 
 `GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Github API Url
 
-<a name='GithubClient.Repositories.Methods.GetRepository(string,string,string,string).Owner'></a>
+<a name='GithubClient.Methods.Repos.GetOrgRepository(string,string,string,string).Org'></a>
 
-`Owner` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`Org` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 The account owner of the repository. This can also be the organization name. The name is not case sensitive.
 
-<a name='GithubClient.Repositories.Methods.GetRepository(string,string,string,string).Name'></a>
+<a name='GithubClient.Methods.Repos.GetOrgRepository(string,string,string,string).Name'></a>
 
 `Name` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
