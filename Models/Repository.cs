@@ -535,7 +535,7 @@ namespace GithubClient.Models
         /// A method to return the default header
         /// </summary>
         /// <returns>The recommended header</returns>
-        public string GetHeader()
+        public static string GetHeader()
         {
             return "application/vnd.github+json";
         }
