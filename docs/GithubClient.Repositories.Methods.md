@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories')
 
 ## Methods Class
 
@@ -13,11 +13,11 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [GetOrgRepositories(string, string, string)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string).md 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string)') | Returns a repository object from the Github API |
-| [GetOrgRepositories(string, string, string, int, int)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string,int,int).md 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string, int, int)') | Returns a repository object from the Github API |
-| [GetOrgRepositories(string, string, string, int, int, string, string)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string,int,int,string,string).md 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string, int, int, string, string)') | Returns a repository object from the Github API |
-| [GetOrgRepository(string, string, string, string)](GithubClient.Repositories.Methods.GetOrgRepository(string,string,string,string).md 'GithubClient.Repositories.Methods.GetOrgRepository(string, string, string, string)') | Returns a repository object from the Github API |
-| [GetRepositories(string, string, string)](GithubClient.Repositories.Methods.GetRepositories(string,string,string).md 'GithubClient.Repositories.Methods.GetRepositories(string, string, string)') | Returns a repository object from the Github API |
-| [GetRepositories(string, string, string, int, int)](GithubClient.Repositories.Methods.GetRepositories(string,string,string,int,int).md 'GithubClient.Repositories.Methods.GetRepositories(string, string, string, int, int)') | Returns a repository object from the Github API |
-| [GetRepositories(string, string, string, int, int, string, string)](GithubClient.Repositories.Methods.GetRepositories(string,string,string,int,int,string,string).md 'GithubClient.Repositories.Methods.GetRepositories(string, string, string, int, int, string, string)') | Returns a repository object from the Github API |
-| [GetRepository(string, string, string, string)](GithubClient.Repositories.Methods.GetRepository(string,string,string,string).md 'GithubClient.Repositories.Methods.GetRepository(string, string, string, string)') | Returns a repository object from the Github API |
+| [GetOrgRepositories(string, string, string)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string) 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string)') | Returns a repository object from the Github API |
+| [GetOrgRepositories(string, string, string, int, int)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string,int,int) 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string, int, int)') | Returns a repository object from the Github API |
+| [GetOrgRepositories(string, string, string, int, int, string, string)](GithubClient.Repositories.Methods.GetOrgRepositories(string,string,string,int,int,string,string) 'GithubClient.Repositories.Methods.GetOrgRepositories(string, string, string, int, int, string, string)') | Returns a repository object from the Github API |
+| [GetOrgRepository(string, string, string, string)](GithubClient.Repositories.Methods.GetOrgRepository(string,string,string,string) 'GithubClient.Repositories.Methods.GetOrgRepository(string, string, string, string)') | Returns a repository object from the Github API |
+| [GetRepositories(string, string, string)](GithubClient.Repositories.Methods.GetRepositories(string,string,string) 'GithubClient.Repositories.Methods.GetRepositories(string, string, string)') | Returns a repository object from the Github API |
+| [GetRepositories(string, string, string, int, int)](GithubClient.Repositories.Methods.GetRepositories(string,string,string,int,int) 'GithubClient.Repositories.Methods.GetRepositories(string, string, string, int, int)') | Returns a repository object from the Github API |
+| [GetRepositories(string, string, string, int, int, string, string)](GithubClient.Repositories.Methods.GetRepositories(string,string,string,int,int,string,string) 'GithubClient.Repositories.Methods.GetRepositories(string, string, string, int, int, string, string)') | Returns a repository object from the Github API |
+| [GetRepository(string, string, string, string)](GithubClient.Repositories.Methods.GetRepository(string,string,string,string) 'GithubClient.Repositories.Methods.GetRepository(string, string, string, string)') | Returns a repository object from the Github API |
