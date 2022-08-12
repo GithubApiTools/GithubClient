@@ -137,6 +137,10 @@ namespace GithubClient.Models
     public class Repository
     {
         /// <summary>
+        /// Github API Url
+        /// </summary>
+        private static readonly string Api = "https://api.github.com";
+        /// <summary>
         /// Github Id
         /// </summary>
         [JsonPropertyName("id")]
@@ -545,7 +549,7 @@ namespace GithubClient.Models
         /// <returns></returns>
         public static Uri GetApiUrl()
         {
-            return new Uri("https://api.github.com");
+            return new Uri(Api);
         }
         /// <summary>
         /// 
@@ -555,7 +559,7 @@ namespace GithubClient.Models
         /// <returns></returns>
         public static Uri GetApiUrl(string Owner, string Name)
         {
-            return new Uri("https://api.github.com/repos/" + Owner + "/" + Name);
+            return new Uri(Api + "/repos/" + Owner + "/" + Name);
         }
         /// <summary>
         /// 
@@ -567,11 +571,11 @@ namespace GithubClient.Models
         {
             if (Org == true)
             {
-                return new Uri("https://api.github.com/orgs/" + Owner + "/repos");
+                return new Uri(Api + "/orgs/" + Owner + "/repos");
             }
             else
             {
-                return new Uri("https://api.github.com/repos/" + Owner);
+                return new Uri(Api + "/repos/" + Owner);
             }
         }
         /// <summary>
@@ -586,7 +590,7 @@ namespace GithubClient.Models
         {
             if (Org == true)
             {
-                return new Uri("https://api.github.com/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page);
+                return new Uri(Api + "/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page);
             }
             return null;
         }
@@ -604,7 +608,7 @@ namespace GithubClient.Models
         {
             if (Org == true)
             {
-                return new Uri("https://api.github.com/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page + "&type=" + Type + "&direction=" + Direction);
+                return new Uri(Api + "/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page + "&type=" + Type + "&direction=" + Direction);
             }
             return null;
         }
