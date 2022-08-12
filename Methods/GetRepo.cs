@@ -18,8 +18,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>>? GetRepositories(string PAT, string Owner)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -37,8 +39,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>> GetRepositories(string PAT, string Owner, int PerPage = 30, int Page = 1)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -59,8 +63,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>> GetRepositories(string PAT, string Owner, int PerPage = 30, int Page = 1, string Type = "all", string Direction = "asc")
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -78,8 +84,10 @@ namespace GithubClient.Methods
         /// <returns>A repository object</returns>
         public static async Task<Repository> GetRepository(string PAT, string Owner, string Name)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -95,8 +103,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>> GetOrgRepositories(string PAT, string Org)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -114,8 +124,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>> GetOrgRepositories(string PAT, string Org, int PerPage = 30, int Page = 1)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -135,8 +147,10 @@ namespace GithubClient.Methods
         /// <returns>A collection of repository objects</returns>
         public static async Task<List<Repository>> GetOrgRepositories(string PAT, string Org, int PerPage = 30, int Page = 1, string Type = "all", string Direction = "asc")
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -153,8 +167,10 @@ namespace GithubClient.Methods
         /// <returns>A repository object</returns>
         public static async Task<Repository> GetOrgRepository(string PAT, string Org, string Name)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Repository.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Repository.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Repository.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");

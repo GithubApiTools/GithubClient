@@ -20,8 +20,10 @@ namespace GithubClient.Methods
         /// <returns>A blob object</returns>
         public static async Task<Blob> GetBlob(string PAT, string Owner, string Name, string Sha)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Blob.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Blob.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Blob.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -37,8 +39,10 @@ namespace GithubClient.Methods
         /// <returns>A blob object</returns>
         public static async Task<Blob>? GetBlob(string PAT, DirectoryContent content)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Blob.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Blob.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Blob.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -59,8 +63,10 @@ namespace GithubClient.Methods
         /// <returns>A blob object</returns>
         public static async Task<Blob>? GetBlob(string PAT, Tree tree)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = Blob.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = Blob.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Blob.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");

@@ -20,8 +20,10 @@ namespace GithubClient.Methods
         /// <returns>A DirectoryContent object</returns>
         public static async Task<List<DirectoryContent>> GetContents(string PAT, string Owner, string Name)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = DirectoryContent.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = DirectoryContent.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(DirectoryContent.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -38,8 +40,10 @@ namespace GithubClient.Methods
         /// <returns>A DirectoryContent object</returns>
         public static async Task<List<DirectoryContent>>? GetContents(string PAT, Repository repository, string Ref = "main")
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = DirectoryContent.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = DirectoryContent.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(DirectoryContent.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -60,8 +64,10 @@ namespace GithubClient.Methods
         /// <returns>A DirectoryContent object</returns>
         public static async Task<List<DirectoryContent>>? GetContents(string PAT, DirectoryContent content)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = DirectoryContent.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = DirectoryContent.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(DirectoryContent.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -82,8 +88,10 @@ namespace GithubClient.Methods
         /// <returns>A FileContent object</returns>
         public static async Task<object> GetFile(string PAT, DirectoryContent content)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = DirectoryContent.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = DirectoryContent.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(FileContent.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");

@@ -20,8 +20,10 @@ namespace GithubClient.Methods
         /// <returns>A tree object</returns>
         public static async Task<BaseTree> GetTree(string PAT, string Owner, string Name, string Ref = "main")
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = BaseTree.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = BaseTree.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -39,8 +41,10 @@ namespace GithubClient.Methods
         /// <returns>A tree object</returns>
         public static async Task<BaseTree>? GetTree(string PAT, Repository repository, string Ref = "main", bool Recursive = true)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = BaseTree.GetApiUrl();
+            HttpClient client = new()
+            {
+                BaseAddress = BaseTree.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
