@@ -1,40 +1,34 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Trees](GithubClient.Methods.Trees 'GithubClient.Methods.Trees')
 
-## Trees.GetTree(string, string, Repository, string, bool) Method
+## Trees.GetTree(string, Repository, string, bool) Method
 
 Returns a repository Tree from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.BaseTree> GetTree(string PAT, string GithubUrl, GithubClient.Models.Repository repository, string Ref="main", bool Recursive=true);
+public static System.Threading.Tasks.Task<GithubClient.Models.BaseTree>? GetTree(string PAT, GithubClient.Models.Repository repository, string Ref="main", bool Recursive=true);
 ```
 #### Parameters
 
-<a name='GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool).PAT'></a>
+<a name='GithubClient.Methods.Trees.GetTree(string,GithubClient.Models.Repository,string,bool).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool).GithubUrl'></a>
-
-`GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
-
-Github API Url
-
-<a name='GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool).repository'></a>
+<a name='GithubClient.Methods.Trees.GetTree(string,GithubClient.Models.Repository,string,bool).repository'></a>
 
 `repository` [Repository](GithubClient.Models.Repository 'GithubClient.Models.Repository')
 
 A Repository object
 
-<a name='GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool).Ref'></a>
+<a name='GithubClient.Methods.Trees.GetTree(string,GithubClient.Models.Repository,string,bool).Ref'></a>
 
 `Ref` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
-<a name='GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool).Recursive'></a>
+<a name='GithubClient.Methods.Trees.GetTree(string,GithubClient.Models.Repository,string,bool).Recursive'></a>
 
 `Recursive` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 

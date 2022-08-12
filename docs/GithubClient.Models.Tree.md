@@ -14,6 +14,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 ### See Also
 - [Github Docs : Trees](https://docs.github.com/en/rest/git/trees 'https://docs.github.com/en/rest/git/trees')
 
+| Fields | |
+| :--- | :--- |
+| [Api](GithubClient.Models.Tree.Api 'GithubClient.Models.Tree.Api') | Github API Url |
+
 | Properties | |
 | :--- | :--- |
 | [Mode](GithubClient.Models.Tree.Mode 'GithubClient.Models.Tree.Mode') | The file mode; one of 100644 for file (blob), 100755 for executable (blob), 040000 for subdirectory (tree), 160000 for submodule (commit), or 120000 for a blob that specifies the path of a symlink. |
@@ -25,4 +29,5 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
+| [GetApiUrl()](GithubClient.Models.Tree.GetApiUrl() 'GithubClient.Models.Tree.GetApiUrl()') | A method to return the API Url |
 | [GetHeader()](GithubClient.Models.Tree.GetHeader() 'GithubClient.Models.Tree.GetHeader()') | A method to return the default header |

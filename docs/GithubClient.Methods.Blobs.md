@@ -13,6 +13,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [GetBlob(string, string, DirectoryContent)](GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent) 'GithubClient.Methods.Blobs.GetBlob(string, string, GithubClient.Models.DirectoryContent)') | Returns a blob object from the Github API |
-| [GetBlob(string, string, Tree)](GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.Tree) 'GithubClient.Methods.Blobs.GetBlob(string, string, GithubClient.Models.Tree)') | Returns a blob object from the Github API |
-| [GetBlob(string, string, string, string, string)](GithubClient.Methods.Blobs.GetBlob(string,string,string,string,string) 'GithubClient.Methods.Blobs.GetBlob(string, string, string, string, string)') | Returns a blob object from the Github API |
+| [GetBlob(string, DirectoryContent)](GithubClient.Methods.Blobs.GetBlob(string,GithubClient.Models.DirectoryContent) 'GithubClient.Methods.Blobs.GetBlob(string, GithubClient.Models.DirectoryContent)') | Returns a blob object from the Github API |
+| [GetBlob(string, Tree)](GithubClient.Methods.Blobs.GetBlob(string,GithubClient.Models.Tree) 'GithubClient.Methods.Blobs.GetBlob(string, GithubClient.Models.Tree)') | Returns a blob object from the Github API |
+| [GetBlob(string, string, string, string)](GithubClient.Methods.Blobs.GetBlob(string,string,string,string) 'GithubClient.Methods.Blobs.GetBlob(string, string, string, string)') | Returns a blob object from the Github API |

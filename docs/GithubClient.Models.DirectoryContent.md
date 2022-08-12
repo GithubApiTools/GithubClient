@@ -14,6 +14,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 ### See Also
 - [Github Docs : Contents](https://docs.github.com/en/rest/repos/contents 'https://docs.github.com/en/rest/repos/contents')
 
+| Fields | |
+| :--- | :--- |
+| [Api](GithubClient.Models.DirectoryContent.Api 'GithubClient.Models.DirectoryContent.Api') | Github API Url |
+
 | Properties | |
 | :--- | :--- |
 | [DownloadUrl](GithubClient.Models.DirectoryContent.DownloadUrl 'GithubClient.Models.DirectoryContent.DownloadUrl') | The raw file download URl |
@@ -29,4 +33,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
+| [GetApiUrl()](GithubClient.Models.DirectoryContent.GetApiUrl() 'GithubClient.Models.DirectoryContent.GetApiUrl()') | A method to return the API Url |
+| [GetApiUrl(string, string)](GithubClient.Models.DirectoryContent.GetApiUrl(string,string) 'GithubClient.Models.DirectoryContent.GetApiUrl(string, string)') | |
 | [GetHeader()](GithubClient.Models.DirectoryContent.GetHeader() 'GithubClient.Models.DirectoryContent.GetHeader()') | A method to return the default header |

@@ -1,34 +1,28 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents 'GithubClient.Methods.Contents')
 
-## Contents.GetContents(string, string, Repository, string) Method
+## Contents.GetContents(string, Repository, string) Method
 
 Returns a content object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>> GetContents(string PAT, string GithubUrl, GithubClient.Models.Repository repository, string Ref="main");
+public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>>? GetContents(string PAT, GithubClient.Models.Repository repository, string Ref="main");
 ```
 #### Parameters
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.Repository,string).PAT'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,GithubClient.Models.Repository,string).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.Repository,string).GithubUrl'></a>
-
-`GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
-
-Github API Url
-
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.Repository,string).repository'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,GithubClient.Models.Repository,string).repository'></a>
 
 `repository` [Repository](GithubClient.Models.Repository 'GithubClient.Models.Repository')
 
 A Repository object
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.Repository,string).Ref'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,GithubClient.Models.Repository,string).Ref'></a>
 
 `Ref` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 

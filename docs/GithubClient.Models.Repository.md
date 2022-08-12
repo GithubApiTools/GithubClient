@@ -14,6 +14,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 ### See Also
 - [Github Docs : Repositories](https://docs.github.com/en/rest/repos/repos 'https://docs.github.com/en/rest/repos/repos')
 
+| Fields | |
+| :--- | :--- |
+| [Api](GithubClient.Models.Repository.Api 'GithubClient.Models.Repository.Api') | Github API Url |
+
 | Properties | |
 | :--- | :--- |
 | [AllowForking](GithubClient.Models.Repository.AllowForking 'GithubClient.Models.Repository.AllowForking') | Either true to allow private forks, or false to prevent private forks |
@@ -98,4 +102,9 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
+| [GetApiUrl()](GithubClient.Models.Repository.GetApiUrl() 'GithubClient.Models.Repository.GetApiUrl()') | A method to return the API Url |
+| [GetApiUrl(string, bool)](GithubClient.Models.Repository.GetApiUrl(string,bool) 'GithubClient.Models.Repository.GetApiUrl(string, bool)') | |
+| [GetApiUrl(string, int, int, bool)](GithubClient.Models.Repository.GetApiUrl(string,int,int,bool) 'GithubClient.Models.Repository.GetApiUrl(string, int, int, bool)') | |
+| [GetApiUrl(string, int, int, string, string, bool)](GithubClient.Models.Repository.GetApiUrl(string,int,int,string,string,bool) 'GithubClient.Models.Repository.GetApiUrl(string, int, int, string, string, bool)') | |
+| [GetApiUrl(string, string)](GithubClient.Models.Repository.GetApiUrl(string,string) 'GithubClient.Models.Repository.GetApiUrl(string, string)') | |
 | [GetHeader()](GithubClient.Models.Repository.GetHeader() 'GithubClient.Models.Repository.GetHeader()') | A method to return the default header |

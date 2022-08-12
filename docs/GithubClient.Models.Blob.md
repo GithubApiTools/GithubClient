@@ -14,6 +14,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 ### See Also
 - [Github Docs : Blobs](https://docs.github.com/en/rest/git/blobs 'https://docs.github.com/en/rest/git/blobs')
 
+| Fields | |
+| :--- | :--- |
+| [Api](GithubClient.Models.Blob.Api 'GithubClient.Models.Blob.Api') | Github API Url |
+
 | Properties | |
 | :--- | :--- |
 | [Content](GithubClient.Models.Blob.Content 'GithubClient.Models.Blob.Content') | File Contents |
@@ -25,4 +29,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
+| [GetApiUrl()](GithubClient.Models.Blob.GetApiUrl() 'GithubClient.Models.Blob.GetApiUrl()') | A method to return the API Url |
+| [GetApiUrl(string, string, string)](GithubClient.Models.Blob.GetApiUrl(string,string,string) 'GithubClient.Models.Blob.GetApiUrl(string, string, string)') | |
 | [GetHeader()](GithubClient.Models.Blob.GetHeader() 'GithubClient.Models.Blob.GetHeader()') | A method to return the default header |
