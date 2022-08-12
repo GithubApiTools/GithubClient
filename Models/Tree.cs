@@ -10,6 +10,10 @@ namespace GithubClient.Models
     public class BaseTree
     {
         /// <summary>
+        /// Github API Url
+        /// </summary>
+        private static readonly string Api = "https://api.github.com";
+        /// <summary>
         /// The object's SHA-1 hash
         /// </summary>
         [JsonPropertyName("sha")]
@@ -29,6 +33,18 @@ namespace GithubClient.Models
         /// </summary>
         [JsonPropertyName("truncated")]
         public bool Truncated { get; set; }
+        /// <summary>
+        /// A method to return the API Url
+        /// </summary>
+        /// <returns></returns>
+        public static Uri GetApiUrl()
+        {
+            return new Uri(Api);
+        }
+        public static Uri GetApiUrl(string Owner, string Name, string Ref = "main")
+        {
+            return new Uri(Api + "/repos/" + Owner + "/" + Name + "/git/trees/" + Ref);
+        }
     }
     /// <summary>
     /// A Git tree object creates the hierarchy between files in a Git repository
@@ -37,6 +53,10 @@ namespace GithubClient.Models
     /// <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
     public class Tree
     {
+        /// <summary>
+        /// Github API Url
+        /// </summary>
+        private static readonly string Api = "https://api.github.com";
         /// <summary>
         /// Path to the object
         /// </summary>
@@ -74,6 +94,14 @@ namespace GithubClient.Models
         public static string GetHeader()
         {
             return "application/vnd.github+json";
+        }
+        /// <summary>
+        /// A method to return the API Url
+        /// </summary>
+        /// <returns></returns>
+        public static Uri GetApiUrl()
+        {
+            return new Uri(Api);
         }
     }
 }

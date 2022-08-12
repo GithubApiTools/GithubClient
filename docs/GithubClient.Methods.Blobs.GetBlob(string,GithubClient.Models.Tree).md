@@ -1,32 +1,26 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs 'GithubClient.Methods.Blobs')
 
-## Blobs.GetBlob(string, string, DirectoryContent) Method
+## Blobs.GetBlob(string, Tree) Method
 
 Returns a blob object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.Blob> GetBlob(string PAT, string GithubUrl, GithubClient.Models.DirectoryContent content);
+public static System.Threading.Tasks.Task<GithubClient.Models.Blob>? GetBlob(string PAT, GithubClient.Models.Tree tree);
 ```
 #### Parameters
 
-<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).PAT'></a>
+<a name='GithubClient.Methods.Blobs.GetBlob(string,GithubClient.Models.Tree).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).GithubUrl'></a>
+<a name='GithubClient.Methods.Blobs.GetBlob(string,GithubClient.Models.Tree).tree'></a>
 
-`GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`tree` [Tree](GithubClient.Models.Tree 'GithubClient.Models.Tree')
 
-Github API Url
-
-<a name='GithubClient.Methods.Blobs.GetBlob(string,string,GithubClient.Models.DirectoryContent).content'></a>
-
-`content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
-
-The contents of a file or directory in a repository.
+Object specifying a tree structure.
 
 #### Returns
 [System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Models.Blob 'GithubClient.Models.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')

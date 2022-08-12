@@ -1,38 +1,32 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents 'GithubClient.Methods.Contents')
 
-## Contents.GetContents(string, string, DirectoryContent, string) Method
+## Contents.GetContents(string, string, string) Method
 
 Returns a content object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>> GetContents(string PAT, string GithubUrl, GithubClient.Models.DirectoryContent content, string Ref="main");
+public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Models.DirectoryContent>> GetContents(string PAT, string Owner, string Name);
 ```
 #### Parameters
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).PAT'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,string).PAT'></a>
 
 `PAT` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 Personal Access Token
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).GithubUrl'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,string).Owner'></a>
 
-`GithubUrl` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+`Owner` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
-Github API Url
+The account owner of the repository. This can also be the organization name. The name is not case sensitive.
 
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).content'></a>
+<a name='GithubClient.Methods.Contents.GetContents(string,string,string).Name'></a>
 
-`content` [DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')
+`Name` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
-A DirectoryContent object
-
-<a name='GithubClient.Methods.Contents.GetContents(string,string,GithubClient.Models.DirectoryContent,string).Ref'></a>
-
-`Ref` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
-
-The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
+The name of the repository. The name is not case sensitive.
 
 #### Returns
 [System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[DirectoryContent](GithubClient.Models.DirectoryContent 'GithubClient.Models.DirectoryContent')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')

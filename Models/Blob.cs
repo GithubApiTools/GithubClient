@@ -10,6 +10,10 @@ namespace GithubClient.Models
     public class Blob
     {
         /// <summary>
+        /// Github API Url
+        /// </summary>
+        private static readonly string Api = "https://api.github.com";
+        /// <summary>
         /// The file's SHA-1 hash is computed and stored in the blob object
         /// </summary>
         [JsonPropertyName("sha")]
@@ -46,6 +50,25 @@ namespace GithubClient.Models
         public static string GetHeader()
         {
             return "application/vnd.github+json";
+        }
+        /// <summary>
+        /// A method to return the API Url
+        /// </summary>
+        /// <returns></returns>
+        public static Uri GetApiUrl()
+        {
+            return new Uri(Api);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+        /// <param name="Name">The name of the repository. The name is not case sensitive.</param>
+        /// <param name="Sha">Secure hashing algorithm</param>
+        /// <returns></returns>
+        public static Uri GetApiUrl(string Owner, string Name, string Sha)
+        {
+            return new Uri(Api + "/repos/" + Owner + "/" + Name + "/git/blobs/" + Sha);
         }
     }
 }

@@ -14,20 +14,20 @@ namespace GithubClient.Methods
         /// </summary>
         /// <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
         /// <param name="PAT">Personal Access Token</param>
-        /// <param name="GithubUrl">Github API Url</param>
         /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
         /// <param name="Name">The name of the repository. The name is not case sensitive.</param>
         /// <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
         /// <returns>A tree object</returns>
-        public static async Task<BaseTree> GetTree(string PAT, string GithubUrl, string Owner, string Name, string Ref = "main")
+        public static async Task<BaseTree> GetTree(string PAT, string Owner, string Name, string Ref = "main")
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(GithubUrl);
+            HttpClient client = new()
+            {
+                BaseAddress = BaseTree.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
-            string RequestUrl = GithubUrl + "/repos/" + Owner + "/" + Name + "/git/trees/" + Ref;
-            Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
+            Task<Stream> Response = client.GetStreamAsync(BaseTree.GetApiUrl(Owner, Name, Ref));
             return JsonSerializer.Deserialize<BaseTree>(await Response);
         }
         /// <summary>
@@ -35,15 +35,16 @@ namespace GithubClient.Methods
         /// </summary>
         /// <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
         /// <param name="PAT">Personal Access Token</param>
-        /// <param name="GithubUrl">Github API Url</param>
         /// <param name="repository">A Repository object</param>
         /// <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
         /// <param name="Recursive">Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in :tree_sha</param>
         /// <returns>A tree object</returns>
-        public static async Task<BaseTree> GetTree(string PAT, string GithubUrl, Repository repository, string Ref = "main", bool Recursive = true)
+        public static async Task<BaseTree>? GetTree(string PAT, Repository repository, string Ref = "main", bool Recursive = true)
         {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(GithubUrl);
+            HttpClient client = new()
+            {
+                BaseAddress = BaseTree.GetApiUrl()
+            };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
@@ -53,10 +54,7 @@ namespace GithubClient.Methods
                 Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
                 return JsonSerializer.Deserialize<BaseTree>(await Response);
             }
-            else
-            {
-                return new BaseTree();
-            }
+            return null;
         }
     }
 }

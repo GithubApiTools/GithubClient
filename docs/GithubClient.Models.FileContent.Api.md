@@ -1,13 +1,13 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[FileContent](GithubClient.Models.FileContent 'GithubClient.Models.FileContent')
 
-## FileContent.Name Property
+## FileContent.Api Field
 
-Name of the object4
+Github API Url
 
 ```csharp
-public string? Name { get; set; }
+private static readonly string Api;
 ```
 
-#### Property Value
+#### Field Value
 [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')

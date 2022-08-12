@@ -1,13 +1,13 @@
 #### [GithubClient](index 'index')
 ### [GithubClient.Models](GithubClient.Models 'GithubClient.Models').[FileContent](GithubClient.Models.FileContent 'GithubClient.Models.FileContent')
 
-## FileContent.Name Property
+## FileContent.GetApiUrl() Method
 
-Name of the object4
+A method to return the API Url
 
 ```csharp
-public string? Name { get; set; }
+public static System.Uri GetApiUrl();
 ```
 
-#### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+#### Returns
+[System.Uri](https://docs.microsoft.com/en-us/dotnet/api/System.Uri 'System.Uri')

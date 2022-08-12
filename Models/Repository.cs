@@ -137,6 +137,10 @@ namespace GithubClient.Models
     public class Repository
     {
         /// <summary>
+        /// Github API Url
+        /// </summary>
+        private static readonly string Api = "https://api.github.com";
+        /// <summary>
         /// Github Id
         /// </summary>
         [JsonPropertyName("id")]
@@ -538,6 +542,75 @@ namespace GithubClient.Models
         public static string GetHeader()
         {
             return "application/vnd.github+json";
+        }
+        /// <summary>
+        /// A method to return the API Url
+        /// </summary>
+        /// <returns></returns>
+        public static Uri GetApiUrl()
+        {
+            return new Uri(Api);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+        /// <param name="Name">The name of the repository. The name is not case sensitive.</param>
+        /// <returns></returns>
+        public static Uri GetApiUrl(string Owner, string Name)
+        {
+            return new Uri(Api + "/repos/" + Owner + "/" + Name);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+        /// <param name="Org">True or False, is this an Organization</param>
+        /// <returns></returns>
+        public static Uri GetApiUrl(string Owner, bool Org)
+        {
+            if (Org == true)
+            {
+                return new Uri(Api + "/orgs/" + Owner + "/repos");
+            }
+            else
+            {
+                return new Uri(Api + "/repos/" + Owner);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+        /// <param name="PerPage">The number of results per page (max 100).</param>
+        /// <param name="Page">Page number of the results to fetch</param>
+        /// <param name="Org">True or False, is this an Organization</param>
+        /// <returns></returns>
+        public static Uri GetApiUrl(string Owner, int PerPage, int Page, bool Org)
+        {
+            if (Org == true)
+            {
+                return new Uri(Api + "/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page);
+            }
+            return null;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+        /// <param name="PerPage">The number of results per page (max 100).</param>
+        /// <param name="Page">Page number of the results to fetch</param>
+        /// <param name="Type">Specifies the types of repositories you want returned.</param>
+        /// <param name="Direction">The order to sort by. Default: asc</param>
+        /// <param name="Org">True or False, is this an Organization</param>
+        /// <returns></returns>
+        public static Uri GetApiUrl(string Owner, int PerPage, int Page, string Type, string Direction, bool Org)
+        {
+            if (Org == true)
+            {
+                return new Uri(Api + "/orgs/" + Owner + "/repos?per_page=" + PerPage + "&page=" + Page + "&type=" + Type + "&direction=" + Direction);
+            }
+            return null;
         }
     }
 }
