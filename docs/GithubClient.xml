@@ -4,6 +4,183 @@
         <name>GithubClient</name>
     </assembly>
     <members>
+        <member name="T:GithubClient.Git.BaseTree">
+            <summary>
+            A Git tree object creates the hierarchy between files in a Git repository
+            </summary>
+            
+            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
+        </member>
+        <member name="F:GithubClient.Git.BaseTree.Api">
+            <summary>
+            Github API Url
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.BaseTree.Tree">
+            <summary>
+            A collection of Tree objects
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.BaseTree.Truncated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GithubClient.Git.BaseTree.#ctor(System.Collections.Generic.List{GithubClient.Git.Tree})">
+            <summary>
+            Default ctor with required properties
+            </summary>
+            <param name="tree"></param>
+        </member>
+        <member name="M:GithubClient.Git.BaseTree.GetHeader">
+            <summary>
+            A method to return the default header
+            </summary>
+            <returns>The recommended header</returns>
+        </member>
+        <member name="M:GithubClient.Git.BaseTree.GetApiUrl">
+            <summary>
+            A method to return the API Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Git.BaseTree.PostEndpoint(System.String,System.String)">
+            <summary>
+            The endpoint used to post a tree to the API
+            </summary>
+            <param name="Owner"></param>
+            <param name="Repo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Git.BaseTree.GetEndpoint(System.String,System.String,System.String)">
+            <summary>
+            The endpoint used to get a tree from the API
+            </summary>
+            <param name="Owner"></param>
+            <param name="Repo"></param>
+            <param name="TreeSha"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GithubClient.Git.Blob">
+            <summary>
+            A Git blob (binary large object) is the object type used to store the contents of each file in a repository.
+            </summary>
+            
+            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blobs</seealso>
+        </member>
+        <member name="F:GithubClient.Git.Blob.Api">
+            <summary>
+            Github API Url
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Blob.NodeId">
+            <summary>
+            Id of a Node (Node is a generic term for an object) used in GraphQL
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Blob.Size">
+            <summary>
+            File size in bytes
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Blob.Content">
+            <summary>
+            File Contents
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Blob.Encoding">
+            <summary>
+            The encoding used for content. Currently, "utf-8" and "base64" are supported.
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Blob.HighlightedContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GithubClient.Git.Blob.#ctor(System.String,System.String)">
+            <summary>
+            Default ctor with required properties
+            </summary>
+            <param name="content"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:GithubClient.Git.Blob.GetHeader">
+            <summary>
+            A method to return the default header
+            </summary>
+            <returns>The recommended header</returns>
+        </member>
+        <member name="M:GithubClient.Git.Blob.GetApiUrl">
+            <summary>
+            A method to return the API Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Git.Blob.PostEndpoint(System.String,System.String)">
+            <summary>
+            The endpoint used to post a blob to the API
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Repo">The name of the repository. The name is not case sensitive.</param>
+            <returns></returns>
+            <seealso href="https://docs.github.com/en/rest/git/blobs#create-a-blob">Create a Blob</seealso>
+        </member>
+        <member name="M:GithubClient.Git.Blob.GetEndpoint(System.String,System.String,System.String)">
+            <summary>
+            The endpoint used to get a blob from the API
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Repo">The name of the repository. The name is not case sensitive.</param>
+            <param name="FileSha">Secure hashing algorithm</param>
+            <returns></returns>
+            <remarks>The content in the response will always be Base64 encoded.</remarks>
+            <remarks>This API supports blobs up to 100 megabytes in size.</remarks>
+            <seealso href="https://docs.github.com/en/rest/git/blobs#get-a-blob">Get a Blob</seealso>
+        </member>
+        <member name="T:GithubClient.Git.GitObject">
+            <summary>
+            The Git Database API gives you access to read and write raw Git objects to your Git database on GitHub and to list and update your references (branch heads and tags)
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/git">Git Database</seealso>
+        </member>
+        <member name="P:GithubClient.Git.GitObject.Sha">
+            <summary>
+            The file's SHA-1 hash is computed and stored in the blob object
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.GitObject.Url">
+            <summary>
+            Github API Url for this object
+            </summary>
+        </member>
+        <member name="T:GithubClient.Git.Tree">
+            <summary>
+            A Git tree object creates the hierarchy between files in a Git repository
+            </summary>
+            
+            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
+        </member>
+        <member name="P:GithubClient.Git.Tree.Path">
+            <summary>
+            Path to the object
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Tree.Mode">
+            <summary>
+            The file mode; one of 100644 for file (blob), 100755 for executable (blob), 040000 for subdirectory (tree), 160000 for submodule (commit), or 120000 for a blob that specifies the path of a symlink.
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Tree.Type">
+            <summary>
+            Either blob, tree, or commit
+            </summary>
+        </member>
+        <member name="P:GithubClient.Git.Tree.Size">
+            <summary>
+            File size in bytes
+            </summary>
+        </member>
         <member name="T:GithubClient.Methods.Blobs">
             <summary>
             A Collection of methods for working with Blob objects in the Github API
@@ -20,7 +197,7 @@
             <param name="Sha">Secure hashing algorithm</param>
             <returns>A blob object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Blobs.GetBlob(System.String,GithubClient.Models.DirectoryContent)">
+        <member name="M:GithubClient.Methods.Blobs.GetBlob(System.String,GithubClient.Repositories.ContentDirectory)">
             <summary>
             Returns a blob object from the Github API
             </summary>
@@ -29,7 +206,7 @@
             <param name="content">The contents of a file or directory in a repository.</param>
             <returns>A blob object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Blobs.GetBlob(System.String,GithubClient.Models.Tree)">
+        <member name="M:GithubClient.Methods.Blobs.GetBlob(System.String,GithubClient.Git.Tree)">
             <summary>
             Returns a blob object from the Github API
             </summary>
@@ -53,7 +230,7 @@
             <param name="Name">The name of the repository. The name is not case sensitive.</param>
             <returns>A DirectoryContent object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Contents.GetContents(System.String,GithubClient.Models.Repository,System.String)">
+        <member name="M:GithubClient.Methods.Contents.GetContents(System.String,GithubClient.Repositories.Repository,System.String)">
             <summary>
             Returns a content object from the Github API
             </summary>
@@ -63,7 +240,7 @@
             <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
             <returns>A DirectoryContent object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Contents.GetContents(System.String,GithubClient.Models.DirectoryContent)">
+        <member name="M:GithubClient.Methods.Contents.GetContents(System.String,GithubClient.Repositories.ContentDirectory)">
             <summary>
             Returns a content object from the Github API
             </summary>
@@ -72,7 +249,7 @@
             <param name="content">A DirectoryContent object</param>
             <returns>A DirectoryContent object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Contents.GetFile(System.String,GithubClient.Models.DirectoryContent)">
+        <member name="M:GithubClient.Methods.Contents.GetFile(System.String,GithubClient.Repositories.ContentDirectory)">
             <summary>
             Returns a content object from the Github API
             </summary>
@@ -85,39 +262,6 @@
             <summary>
             A Collection of methods for working with Repository objects in the Github API
             </summary>
-        </member>
-        <member name="M:GithubClient.Methods.Repos.GetRepositories(System.String,System.String)">
-            <summary>
-            Returns a repository object from the Github API
-            </summary>
-            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
-            <param name="PAT">Personal Access Token</param>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <returns>A collection of repository objects</returns>
-        </member>
-        <member name="M:GithubClient.Methods.Repos.GetRepositories(System.String,System.String,System.Int32,System.Int32)">
-            <summary>
-            Returns a repository object from the Github API
-            </summary>
-            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
-            <param name="PAT">Personal Access Token</param>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <param name="PerPage">The number of results per page (max 100).</param>
-            <param name="Page">Page number of the results to fetch</param>
-            <returns>A collection of repository objects</returns>
-        </member>
-        <member name="M:GithubClient.Methods.Repos.GetRepositories(System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
-            <summary>
-            Returns a repository object from the Github API
-            </summary>
-            <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repos</seealso>
-            <param name="PAT">Personal Access Token</param>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <param name="PerPage">The number of results per page (max 100).</param>
-            <param name="Page">Page number of the results to fetch</param>
-            <param name="Type">Specifies the types of repositories you want returned.</param>
-            <param name="Direction">The order to sort by. Default: asc</param>
-            <returns>A collection of repository objects</returns>
         </member>
         <member name="M:GithubClient.Methods.Repos.GetRepository(System.String,System.String,System.String)">
             <summary>
@@ -188,7 +332,7 @@
             <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
             <returns>A tree object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Trees.GetTree(System.String,GithubClient.Models.Repository,System.String,System.Boolean)">
+        <member name="M:GithubClient.Methods.Trees.GetTree(System.String,GithubClient.Repositories.Repository,System.String,System.Boolean)">
             <summary>
             Returns a repository Tree from the Github API
             </summary>
@@ -199,164 +343,76 @@
             <param name="Recursive">Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in :tree_sha</param>
             <returns>A tree object</returns>
         </member>
-        <member name="T:GithubClient.Models.Blob">
-            <summary>
-            A Git blob (binary large object) is the object type used to store the contents of each file in a repository.
-            </summary>
-            
-            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blobs</seealso>
-        </member>
-        <member name="F:GithubClient.Models.Blob.Api">
-            <summary>
-            Github API Url
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.Sha">
-            <summary>
-            The file's SHA-1 hash is computed and stored in the blob object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.NodeId">
-            <summary>
-            Id of a Node (Node is a generic term for an object) used in GraphQL
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.Size">
-            <summary>
-            File size in bytes
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.Url">
-            <summary>
-            Github API Url for this object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.Content">
-            <summary>
-            File Contents
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Blob.Encoding">
-            <summary>
-            The encoding used for content. Currently, "utf-8" and "base64" are supported.
-            </summary>
-        </member>
-        <member name="M:GithubClient.Models.Blob.GetHeader">
-            <summary>
-            A method to return the default header
-            </summary>
-            <returns>The recommended header</returns>
-        </member>
-        <member name="M:GithubClient.Models.Blob.GetApiUrl">
-            <summary>
-            A method to return the API Url
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:GithubClient.Models.Blob.GetApiUrl(System.String,System.String,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <param name="Name">The name of the repository. The name is not case sensitive.</param>
-            <param name="Sha">Secure hashing algorithm</param>
-            <returns></returns>
-        </member>
-        <member name="T:GithubClient.Models.Links">
-            <summary>
-            A links object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Links.Self">
-            <summary>
-            Github API Url for this object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Links.Git">
-            <summary>
-            Github API Url for this objects blob
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Links.Html">
-            <summary>
-            A Url to view this object in a browser
-            </summary>
-        </member>
-        <member name="T:GithubClient.Models.DirectoryContent">
+        <member name="T:GithubClient.Repositories.ContentDirectory">
             <summary>
             The contents of a file or directory in a repository
             </summary>
             
             <seealso href="https://docs.github.com/en/rest/repos/contents">Github Docs : Contents</seealso>
         </member>
-        <member name="F:GithubClient.Models.DirectoryContent.Api">
+        <member name="F:GithubClient.Repositories.ContentDirectory.Api">
             <summary>
             Github API Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Name">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Name">
             <summary>
             Name of the object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Path">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Path">
             <summary>
             Path to the object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Sha">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Sha">
             <summary>
             The file's SHA-1 hash
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Size">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Size">
             <summary>
             File size in bytes
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Url">
-            <summary>
-            Github API Url for this object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.DirectoryContent.HtmlUrl">
+        <member name="P:GithubClient.Repositories.ContentDirectory.HtmlUrl">
             <summary>
             A Url to view this object in a browser
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.GitUrl">
+        <member name="P:GithubClient.Repositories.ContentDirectory.GitUrl">
             <summary>
             Github API Url for this objects blob
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.DownloadUrl">
+        <member name="P:GithubClient.Repositories.ContentDirectory.DownloadUrl">
             <summary>
             The raw file download URl
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Type">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Type">
             <summary>
             file or dir
             </summary>
         </member>
-        <member name="P:GithubClient.Models.DirectoryContent.Links">
+        <member name="P:GithubClient.Repositories.ContentDirectory.Links">
             <summary>
             Collection of links
             </summary>
         </member>
-        <member name="M:GithubClient.Models.DirectoryContent.GetHeader">
+        <member name="M:GithubClient.Repositories.ContentDirectory.GetHeader">
             <summary>
             A method to return the default header
             </summary>
             <returns>The recommended header</returns>
         </member>
-        <member name="M:GithubClient.Models.DirectoryContent.GetApiUrl">
+        <member name="M:GithubClient.Repositories.ContentDirectory.GetApiUrl">
             <summary>
             A method to return the API Url
             </summary>
             <returns></returns>
         </member>
-        <member name="M:GithubClient.Models.DirectoryContent.GetApiUrl(System.String,System.String)">
+        <member name="M:GithubClient.Repositories.ContentDirectory.GetEndpointUrl(System.String,System.String)">
             <summary>
             
             </summary>
@@ -364,763 +420,757 @@
             <param name="Name">The name of the repository. The name is not case sensitive.</param>
             <returns></returns>
         </member>
-        <member name="T:GithubClient.Models.FileContent">
+        <member name="M:GithubClient.Repositories.ContentDirectory.GetEndpointUrl(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Path">Path parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Repositories.ContentDirectory.GetEndpointUrl(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Path">Path parameter</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <returns></returns>
+        </member>
+        <member name="T:GithubClient.Repositories.ContentFile">
             <summary>
             The contents of a file or directory in a repository
             </summary>
             
             <seealso href="https://docs.github.com/en/rest/repos/contents">Github Docs : Contents</seealso>
         </member>
-        <member name="F:GithubClient.Models.FileContent.Api">
+        <member name="F:GithubClient.Repositories.ContentFile.Api">
             <summary>
             Github API Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Name">
+        <member name="P:GithubClient.Repositories.ContentFile.Name">
             <summary>
             Name of the object4
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Path">
+        <member name="P:GithubClient.Repositories.ContentFile.Path">
             <summary>
             Path to the object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Sha">
+        <member name="P:GithubClient.Repositories.ContentFile.Sha">
             <summary>
             The file's SHA-1 hash
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Size">
+        <member name="P:GithubClient.Repositories.ContentFile.Size">
             <summary>
             File size in bytes
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Url">
-            <summary>
-            Github API Url for this object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.FileContent.HtmlUrl">
+        <member name="P:GithubClient.Repositories.ContentFile.HtmlUrl">
             <summary>
             A Url to view this object in a browser
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.GitUrl">
+        <member name="P:GithubClient.Repositories.ContentFile.GitUrl">
             <summary>
             Github API Url for this objects blob
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.DownloadUrl">
+        <member name="P:GithubClient.Repositories.ContentFile.DownloadUrl">
             <summary>
             The raw file download URl
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Type">
+        <member name="P:GithubClient.Repositories.ContentFile.Type">
             <summary>
             file or dir
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Content">
+        <member name="P:GithubClient.Repositories.ContentFile.Content">
             <summary>
             File content
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Encoding">
+        <member name="P:GithubClient.Repositories.ContentFile.Encoding">
             <summary>
             Is always Base-64
             </summary>
         </member>
-        <member name="P:GithubClient.Models.FileContent.Links">
+        <member name="P:GithubClient.Repositories.ContentFile.Links">
             <summary>
             Collection of links
             </summary>
         </member>
-        <member name="M:GithubClient.Models.FileContent.GetHeader">
+        <member name="M:GithubClient.Repositories.ContentFile.#ctor(System.String,System.String)">
             <summary>
-            A method to return the default header
+            
             </summary>
-            <returns>The recommended header</returns>
+            <param name="path"></param>
+            <param name="content"></param>
         </member>
-        <member name="M:GithubClient.Models.FileContent.GetApiUrl">
+        <member name="M:GithubClient.Repositories.ContentFile.GetApiUrl">
             <summary>
             A method to return the API Url
             </summary>
             <returns></returns>
         </member>
-        <member name="T:GithubClient.Models.Owner">
+        <member name="M:GithubClient.Repositories.ContentFile.GetHeader">
             <summary>
-            Owner object
+            A method to return the default header
+            </summary>
+            <returns>The recommended header</returns>
+        </member>
+        <member name="M:GithubClient.Repositories.ContentFile.PutEndpointUrl(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Path">Path parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Repositories.ContentFile.GetEndpointUrl(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Path">Path parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Repositories.ContentFile.GetEndpointUrl(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Name">The name of the repository. The name is not case sensitive.</param>
+            <param name="Path">Path parameter</param>
+            <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
+            <returns></returns>
+        </member>
+        <member name="T:GithubClient.Repositories.Links">
+            <summary>
+            A links object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Owner.Login">
-            <summary>
-            Username/Orgname
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.Id">
-            <summary>
-            Github Id
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.NodeId">
-            <summary>
-            Id of a Node (Node is a generic term for an object) used in GraphQL
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.AvatarUrl">
-            <summary>
-            Url to Avatar image
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.GravatarId">
-            <summary>
-            Url to Gravatar Id
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.Url">
+        <member name="P:GithubClient.Repositories.Links.Self">
             <summary>
             Github API Url for this object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Owner.HtmlUrl">
+        <member name="P:GithubClient.Repositories.Links.Git">
+            <summary>
+            Github API Url for this objects blob
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Links.Html">
             <summary>
             A Url to view this object in a browser
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Owner.FollowersUrl">
+        <member name="T:GithubClient.Repositories.GitObject">
             <summary>
-            Github API Url for followers endpoint
+            The ultimate source for the network
+            </summary>
+            <seealso href="https://docs.github.com/en/rest/repos">Repositories</seealso>
+        </member>
+        <member name="P:GithubClient.Repositories.GitObject.Url">
+            <summary>
+            Github API Url for this object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Owner.FollowingUrl">
-            <summary>
-            Github API Url for following endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.GistsUrl">
-            <summary>
-            Github API Url for Gists endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.StarredUrl">
-            <summary>
-            Github API Url for Starred endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.SubscriptionsUrl">
-            <summary>
-            Github API Url for Subscriptions endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.OrganizationsUrl">
-            <summary>
-            Github API Url for Organizations endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.ReposUrl">
-            <summary>
-            Github API Url for user's repos endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.EventsUrl">
-            <summary>
-            Github API Url for Events endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.ReceivedEventsUrl">
-            <summary>
-            Github API Url for received events endpoint
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.Type">
-            <summary>
-            User/Organization
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Owner.SiteAdmin">
-            <summary>
-            Enterprise SiteAdmin
-            </summary>
-        </member>
-        <member name="T:GithubClient.Models.Permissions">
-            <summary>
-            Permissions object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Permissions.Admin">
-            <summary>
-            Are you an admin
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Permissions.Maintain">
-            <summary>
-            Are you a maintainer
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Permissions.Push">
-            <summary>
-            Can you push
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Permissions.Triage">
-            <summary>
-            Can you triage
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Permissions.Pull">
-            <summary>
-            Can you pull
-            </summary>
-        </member>
-        <member name="T:GithubClient.Models.Repository">
+        <member name="T:GithubClient.Repositories.Repository">
             <summary>
             The ultimate source for the network
             </summary>
             
             <seealso href="https://docs.github.com/en/rest/repos/repos">Github Docs : Repositories</seealso>
         </member>
-        <member name="F:GithubClient.Models.Repository.Api">
+        <member name="F:GithubClient.Repositories.Repository.Api">
             <summary>
             Github API Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Id">
+        <member name="P:GithubClient.Repositories.Repository.Id">
             <summary>
             Github Id
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.NodeId">
+        <member name="P:GithubClient.Repositories.Repository.NodeId">
             <summary>
             Id of a Node (Node is a generic term for an object) used in GraphQL
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Name">
+        <member name="P:GithubClient.Repositories.Repository.Name">
             <summary>
             The name of the repository.
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.FullName">
+        <member name="P:GithubClient.Repositories.Repository.FullName">
             <summary>
             A short description of the repository
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Private">
+        <member name="P:GithubClient.Repositories.Repository.Private">
             <summary>
             Either true to make the repository private or false to make it public
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Owner">
+        <member name="P:GithubClient.Repositories.Repository.Owner">
             <summary>
             Owner object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HtmlUrl">
+        <member name="P:GithubClient.Repositories.Repository.HtmlUrl">
             <summary>
             A Url to view this object in a browser
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Description">
+        <member name="P:GithubClient.Repositories.Repository.Description">
             <summary>
             A short description of the repository
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Fork">
+        <member name="P:GithubClient.Repositories.Repository.Fork">
             <summary>
             True if this repository is forked
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Url">
-            <summary>
-            Github API Url for this object
-            </summary>
-        </member>
-        <member name="P:GithubClient.Models.Repository.ForksUrl">
+        <member name="P:GithubClient.Repositories.Repository.ForksUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.KeysUrl">
+        <member name="P:GithubClient.Repositories.Repository.KeysUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CollaboratorsUrl">
+        <member name="P:GithubClient.Repositories.Repository.CollaboratorsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.TeamsUrl">
+        <member name="P:GithubClient.Repositories.Repository.TeamsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HooksUrl">
+        <member name="P:GithubClient.Repositories.Repository.HooksUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.IssueEventsUrl">
+        <member name="P:GithubClient.Repositories.Repository.IssueEventsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.EventsUrl">
+        <member name="P:GithubClient.Repositories.Repository.EventsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.AssigneesUrl">
+        <member name="P:GithubClient.Repositories.Repository.AssigneesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.BranchesUrl">
+        <member name="P:GithubClient.Repositories.Repository.BranchesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.TagsUrl">
+        <member name="P:GithubClient.Repositories.Repository.TagsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.BlobsUrl">
+        <member name="P:GithubClient.Repositories.Repository.BlobsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.GitTagsUrl">
+        <member name="P:GithubClient.Repositories.Repository.GitTagsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.GitRefsUrl">
+        <member name="P:GithubClient.Repositories.Repository.GitRefsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.TreesUrl">
+        <member name="P:GithubClient.Repositories.Repository.TreesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.StatusesUrl">
+        <member name="P:GithubClient.Repositories.Repository.StatusesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.LanguagesUrl">
+        <member name="P:GithubClient.Repositories.Repository.LanguagesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.StargazersUrl">
+        <member name="P:GithubClient.Repositories.Repository.StargazersUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.ContributorsUrl">
+        <member name="P:GithubClient.Repositories.Repository.ContributorsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.SubscribersUrl">
+        <member name="P:GithubClient.Repositories.Repository.SubscribersUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.SubscriptionUrl">
+        <member name="P:GithubClient.Repositories.Repository.SubscriptionUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CommitsUrl">
+        <member name="P:GithubClient.Repositories.Repository.CommitsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.GitCommitsUrl">
+        <member name="P:GithubClient.Repositories.Repository.GitCommitsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CommentsUrl">
+        <member name="P:GithubClient.Repositories.Repository.CommentsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.IssueCommentUrl">
+        <member name="P:GithubClient.Repositories.Repository.IssueCommentUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.ContentsUrl">
+        <member name="P:GithubClient.Repositories.Repository.ContentsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CompareUrl">
+        <member name="P:GithubClient.Repositories.Repository.CompareUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.MergesUrl">
+        <member name="P:GithubClient.Repositories.Repository.MergesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.ArchiveUrl">
+        <member name="P:GithubClient.Repositories.Repository.ArchiveUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.DownloadsUrl">
+        <member name="P:GithubClient.Repositories.Repository.DownloadsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.IssuesUrl">
+        <member name="P:GithubClient.Repositories.Repository.IssuesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.PullsUrl">
+        <member name="P:GithubClient.Repositories.Repository.PullsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.MilestonesUrl">
+        <member name="P:GithubClient.Repositories.Repository.MilestonesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.NotificationsUrl">
+        <member name="P:GithubClient.Repositories.Repository.NotificationsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.LabelsUrl">
+        <member name="P:GithubClient.Repositories.Repository.LabelsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.ReleasesUrl">
+        <member name="P:GithubClient.Repositories.Repository.ReleasesUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.DeploymentsUrl">
+        <member name="P:GithubClient.Repositories.Repository.DeploymentsUrl">
             <summary>
             Github API Endpoint Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CreatedAt">
+        <member name="P:GithubClient.Repositories.Repository.CreatedAt">
             <summary>
             Repository Creation Date
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.UpdatedAt">
+        <member name="P:GithubClient.Repositories.Repository.UpdatedAt">
             <summary>
             Repository Update Date
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.PushedAt">
+        <member name="P:GithubClient.Repositories.Repository.PushedAt">
             <summary>
             Most recent push
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.GitUrl">
+        <member name="P:GithubClient.Repositories.Repository.GitUrl">
             <summary>
             Git Clone Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.SshUrl">
+        <member name="P:GithubClient.Repositories.Repository.SshUrl">
             <summary>
             Ssh Clone Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.CloneUrl">
+        <member name="P:GithubClient.Repositories.Repository.CloneUrl">
             <summary>
             Http Clone Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.SvnUrl">
+        <member name="P:GithubClient.Repositories.Repository.SvnUrl">
             <summary>
             Svn Clone Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Homepage">
+        <member name="P:GithubClient.Repositories.Repository.Homepage">
             <summary>
             A URL with more information about the repository
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Size">
+        <member name="P:GithubClient.Repositories.Repository.Size">
             <summary>
             Size in bytes
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.StargazersCount">
+        <member name="P:GithubClient.Repositories.Repository.StargazersCount">
             <summary>
             Count of Stargazers
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.WatchersCount">
+        <member name="P:GithubClient.Repositories.Repository.WatchersCount">
             <summary>
             Count of Watchers
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Language">
+        <member name="P:GithubClient.Repositories.Repository.Language">
             <summary>
             Repository Language
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HasIssues">
+        <member name="P:GithubClient.Repositories.Repository.HasIssues">
             <summary>
             Either true to enable issues for this repository or false to disable them
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HasProjects">
+        <member name="P:GithubClient.Repositories.Repository.HasProjects">
             <summary>
             Either true to enable projects for this repository or false to disable them
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HasDownloads">
+        <member name="P:GithubClient.Repositories.Repository.HasDownloads">
             <summary>
             True or False if downloads are available
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HasWiki">
+        <member name="P:GithubClient.Repositories.Repository.HasWiki">
             <summary>
             Either true to enable the wiki for this repository or false to disable it.
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.HasPages">
+        <member name="P:GithubClient.Repositories.Repository.HasPages">
             <summary>
             Either true to enable the pages for this repository or false to disable it.
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.ForksCount">
+        <member name="P:GithubClient.Repositories.Repository.ForksCount">
             <summary>
             Count of Forks
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.MirrorUrl">
+        <member name="P:GithubClient.Repositories.Repository.MirrorUrl">
             <summary>
             Mirror Url
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Archived">
+        <member name="P:GithubClient.Repositories.Repository.Archived">
             <summary>
             true to archive this repository. Note: You cannot unarchive repositories through the API
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Disabled">
+        <member name="P:GithubClient.Repositories.Repository.Disabled">
             <summary>
             True or False
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.OpenIssuesCount">
+        <member name="P:GithubClient.Repositories.Repository.OpenIssuesCount">
             <summary>
             Count of open issues
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.License">
+        <member name="P:GithubClient.Repositories.Repository.License">
             <summary>
             License Object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.AllowForking">
+        <member name="P:GithubClient.Repositories.Repository.AllowForking">
             <summary>
             Either true to allow private forks, or false to prevent private forks
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.IsTemplate">
+        <member name="P:GithubClient.Repositories.Repository.IsTemplate">
             <summary>
             Either true to make this repo available as a template repository or false to prevent it
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.WebCommitSignoffRequired">
+        <member name="P:GithubClient.Repositories.Repository.WebCommitSignoffRequired">
             <summary>
             True or False for signoff
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Topics">
+        <member name="P:GithubClient.Repositories.Repository.Topics">
             <summary>
             Topic List
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Visibility">
+        <member name="P:GithubClient.Repositories.Repository.Visibility">
             <summary>
             Can be public or private
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Forks">
+        <member name="P:GithubClient.Repositories.Repository.Forks">
             <summary>
             Number of forks
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.OpenIssues">
+        <member name="P:GithubClient.Repositories.Repository.OpenIssues">
             <summary>
             Count of Open issues
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Watchers">
+        <member name="P:GithubClient.Repositories.Repository.Watchers">
             <summary>
             Number of watchers
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.DefaultBranch">
+        <member name="P:GithubClient.Repositories.Repository.DefaultBranch">
             <summary>
             Default repository branch
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Repository.Permissions">
+        <member name="P:GithubClient.Repositories.Repository.Permissions">
             <summary>
             Permissions object
             </summary>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetHeader">
+        <member name="M:GithubClient.Repositories.Repository.#ctor(System.String)">
+            <summary>
+            Default ctor with required properties
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:GithubClient.Repositories.Repository.GetHeader">
             <summary>
             A method to return the default header
             </summary>
             <returns>The recommended header</returns>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetApiUrl">
+        <member name="M:GithubClient.Repositories.Repository.GetApiUrl">
             <summary>
             A method to return the API Url
             </summary>
             <returns></returns>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetApiUrl(System.String,System.String)">
+        <member name="M:GithubClient.Repositories.Repository.PostEndpoint">
             <summary>
             
             </summary>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <param name="Name">The name of the repository. The name is not case sensitive.</param>
             <returns></returns>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetApiUrl(System.String,System.Boolean)">
+        <member name="M:GithubClient.Repositories.Repository.GetEndpoint(System.String,System.String)">
             <summary>
             
             </summary>
             <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
-            <param name="Org">True or False, is this an Organization</param>
+            <param name="Repo">The name of the repository. The name is not case sensitive.</param>
             <returns></returns>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetApiUrl(System.String,System.Int32,System.Int32,System.Boolean)">
+        <member name="M:GithubClient.Repositories.Repository.PostOrgEndpoint(System.String)">
             <summary>
             
             </summary>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Repository.GetOrgEndpoint(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GithubClient.Repositories.Repository.GetOrgEndpoint(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
             <param name="PerPage">The number of results per page (max 100).</param>
             <param name="Page">Page number of the results to fetch</param>
-            <param name="Org">True or False, is this an Organization</param>
             <returns></returns>
         </member>
-        <member name="M:GithubClient.Models.Repository.GetApiUrl(System.String,System.Int32,System.Int32,System.String,System.String,System.Boolean)">
+        <member name="M:GithubClient.Repositories.Repository.GetOrgEndpoint(System.String,System.Int32,System.Int32,System.String,System.String)">
             <summary>
             
             </summary>
-            <param name="Owner">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
+            <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
             <param name="PerPage">The number of results per page (max 100).</param>
             <param name="Page">Page number of the results to fetch</param>
             <param name="Type">Specifies the types of repositories you want returned.</param>
             <param name="Direction">The order to sort by. Default: asc</param>
-            <param name="Org">True or False, is this an Organization</param>
             <returns></returns>
         </member>
-        <member name="T:GithubClient.Models.BaseTree">
+        <member name="T:GithubClient.Repositories.Owner">
             <summary>
-            A Git tree object creates the hierarchy between files in a Git repository
-            </summary>
-            
-            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
-        </member>
-        <member name="F:GithubClient.Models.BaseTree.Api">
-            <summary>
-            Github API Url
+            Owner object
             </summary>
         </member>
-        <member name="P:GithubClient.Models.BaseTree.Sha">
+        <member name="P:GithubClient.Repositories.Owner.Login">
             <summary>
-            The object's SHA-1 hash
+            Username/Orgname
             </summary>
         </member>
-        <member name="P:GithubClient.Models.BaseTree.Url">
+        <member name="P:GithubClient.Repositories.Owner.Id">
             <summary>
-            Github API Url for this object
+            Github Id
             </summary>
         </member>
-        <member name="P:GithubClient.Models.BaseTree.Tree">
+        <member name="P:GithubClient.Repositories.Owner.NodeId">
             <summary>
-            A collection of Tree objects
+            Id of a Node (Node is a generic term for an object) used in GraphQL
             </summary>
         </member>
-        <member name="P:GithubClient.Models.BaseTree.Truncated">
+        <member name="P:GithubClient.Repositories.Owner.AvatarUrl">
             <summary>
-            
+            Url to Avatar image
             </summary>
         </member>
-        <member name="M:GithubClient.Models.BaseTree.GetApiUrl">
+        <member name="P:GithubClient.Repositories.Owner.GravatarId">
             <summary>
-            A method to return the API Url
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:GithubClient.Models.Tree">
-            <summary>
-            A Git tree object creates the hierarchy between files in a Git repository
-            </summary>
-            
-            <seealso href="https://docs.github.com/en/rest/git/trees">Github Docs : Trees</seealso>
-        </member>
-        <member name="F:GithubClient.Models.Tree.Api">
-            <summary>
-            Github API Url
+            Url to Gravatar Id
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Path">
+        <member name="P:GithubClient.Repositories.Owner.HtmlUrl">
             <summary>
-            Path to the object
+            A Url to view this object in a browser
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Mode">
+        <member name="P:GithubClient.Repositories.Owner.FollowersUrl">
             <summary>
-            The file mode; one of 100644 for file (blob), 100755 for executable (blob), 040000 for subdirectory (tree), 160000 for submodule (commit), or 120000 for a blob that specifies the path of a symlink.
+            Github API Url for followers endpoint
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Type">
+        <member name="P:GithubClient.Repositories.Owner.FollowingUrl">
             <summary>
-            Either blob, tree, or commit
+            Github API Url for following endpoint
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Sha">
+        <member name="P:GithubClient.Repositories.Owner.GistsUrl">
             <summary>
-            The object's SHA-1 hash
+            Github API Url for Gists endpoint
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Size">
+        <member name="P:GithubClient.Repositories.Owner.StarredUrl">
             <summary>
-            File size in bytes
+            Github API Url for Starred endpoint
             </summary>
         </member>
-        <member name="P:GithubClient.Models.Tree.Url">
+        <member name="P:GithubClient.Repositories.Owner.SubscriptionsUrl">
             <summary>
-            Github API Url for this object
+            Github API Url for Subscriptions endpoint
             </summary>
         </member>
-        <member name="M:GithubClient.Models.Tree.GetHeader">
+        <member name="P:GithubClient.Repositories.Owner.OrganizationsUrl">
             <summary>
-            A method to return the default header
+            Github API Url for Organizations endpoint
             </summary>
-            <returns>The recommended header</returns>
         </member>
-        <member name="M:GithubClient.Models.Tree.GetApiUrl">
+        <member name="P:GithubClient.Repositories.Owner.ReposUrl">
             <summary>
-            A method to return the API Url
+            Github API Url for user's repos endpoint
             </summary>
-            <returns></returns>
+        </member>
+        <member name="P:GithubClient.Repositories.Owner.EventsUrl">
+            <summary>
+            Github API Url for Events endpoint
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Owner.ReceivedEventsUrl">
+            <summary>
+            Github API Url for received events endpoint
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Owner.Type">
+            <summary>
+            User/Organization
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Owner.SiteAdmin">
+            <summary>
+            Enterprise SiteAdmin
+            </summary>
+        </member>
+        <member name="T:GithubClient.Repositories.Permissions">
+            <summary>
+            Permissions object
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Permissions.Admin">
+            <summary>
+            Are you an admin
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Permissions.Maintain">
+            <summary>
+            Are you a maintainer
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Permissions.Push">
+            <summary>
+            Can you push
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Permissions.Triage">
+            <summary>
+            Can you triage
+            </summary>
+        </member>
+        <member name="P:GithubClient.Repositories.Permissions.Pull">
+            <summary>
+            Can you pull
+            </summary>
         </member>
     </members>
 </doc>
