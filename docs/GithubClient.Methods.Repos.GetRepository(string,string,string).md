@@ -1,12 +1,12 @@
-#### [GithubClient](index 'index')
-### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Repos](GithubClient.Methods.Repos 'GithubClient.Methods.Repos')
+#### [GithubClient](index.md 'index')
+### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Repos](GithubClient.Methods.Repos.md 'GithubClient.Methods.Repos')
 
 ## Repos.GetRepository(string, string, string) Method
 
 Returns a repository object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.Repository> GetRepository(string PAT, string Owner, string Name);
+public static System.Threading.Tasks.Task<GithubClient.Repositories.Repository> GetRepository(string PAT, string Owner, string Name);
 ```
 #### Parameters
 
@@ -29,7 +29,7 @@ The account owner of the repository. This can also be the organization name. The
 The name of the repository. The name is not case sensitive.
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Repository](GithubClient.Models.Repository 'GithubClient.Models.Repository')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Repository](GithubClient.Repositories.Repository.md 'GithubClient.Repositories.Repository')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
 A repository object
 
 ### See Also

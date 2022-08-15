@@ -1,0 +1,36 @@
+#### [GithubClient](index.md 'index')
+### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[ContentFile](GithubClient.Repositories.ContentFile.md 'GithubClient.Repositories.ContentFile')
+
+## ContentFile.GetEndpointUrl(string, string, string, string) Method
+
+```csharp
+public static System.Uri GetEndpointUrl(string Owner, string Name, string Path, string Ref);
+```
+#### Parameters
+
+<a name='GithubClient.Repositories.ContentFile.GetEndpointUrl(string,string,string,string).Owner'></a>
+
+`Owner` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+The account owner of the repository. This can also be the organization name. The name is not case sensitive.
+
+<a name='GithubClient.Repositories.ContentFile.GetEndpointUrl(string,string,string,string).Name'></a>
+
+`Name` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+The name of the repository. The name is not case sensitive.
+
+<a name='GithubClient.Repositories.ContentFile.GetEndpointUrl(string,string,string,string).Path'></a>
+
+`Path` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+Path parameter
+
+<a name='GithubClient.Repositories.ContentFile.GetEndpointUrl(string,string,string,string).Ref'></a>
+
+`Ref` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
+
+#### Returns
+[System.Uri](https://docs.microsoft.com/en-us/dotnet/api/System.Uri 'System.Uri')

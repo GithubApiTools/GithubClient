@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using System.Net.Http.Headers;
-using GithubClient.Models;
+using GithubClient.Git;
+using GithubClient.Repositories;
 
 namespace GithubClient.Methods
 {
@@ -24,10 +25,10 @@ namespace GithubClient.Methods
             {
                 BaseAddress = BaseTree.GetApiUrl()
             };
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseTree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
-            Task<Stream> Response = client.GetStreamAsync(BaseTree.GetApiUrl(Owner, Name, Ref));
+            Task<Stream> Response = client.GetStreamAsync(BaseTree.GetEndpoint(Owner, Name, Ref));
             return JsonSerializer.Deserialize<BaseTree>(await Response);
         }
         /// <summary>
@@ -45,7 +46,7 @@ namespace GithubClient.Methods
             {
                 BaseAddress = BaseTree.GetApiUrl()
             };
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Tree.GetHeader()));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseTree.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             if (repository.TreesUrl != null)

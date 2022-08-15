@@ -1,12 +1,12 @@
-#### [GithubClient](index 'index')
-### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Trees](GithubClient.Methods.Trees 'GithubClient.Methods.Trees')
+#### [GithubClient](index.md 'index')
+### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Trees](GithubClient.Methods.Trees.md 'GithubClient.Methods.Trees')
 
 ## Trees.GetTree(string, string, string, string) Method
 
 Returns a repository Tree from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.BaseTree> GetTree(string PAT, string Owner, string Name, string Ref="main");
+public static System.Threading.Tasks.Task<GithubClient.Git.BaseTree> GetTree(string PAT, string Owner, string Name, string Ref="main");
 ```
 #### Parameters
 
@@ -35,7 +35,7 @@ The name of the repository. The name is not case sensitive.
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[BaseTree](GithubClient.Models.BaseTree 'GithubClient.Models.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[BaseTree](GithubClient.Git.BaseTree.md 'GithubClient.Git.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
 A tree object
 
 ### See Also

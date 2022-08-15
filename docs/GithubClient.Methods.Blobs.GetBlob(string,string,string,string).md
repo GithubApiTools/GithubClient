@@ -1,12 +1,12 @@
-#### [GithubClient](index 'index')
-### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs 'GithubClient.Methods.Blobs')
+#### [GithubClient](index.md 'index')
+### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs.md 'GithubClient.Methods.Blobs')
 
 ## Blobs.GetBlob(string, string, string, string) Method
 
 Returns a blob object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Models.Blob> GetBlob(string PAT, string Owner, string Name, string Sha);
+public static System.Threading.Tasks.Task<GithubClient.Git.Blob> GetBlob(string PAT, string Owner, string Name, string Sha);
 ```
 #### Parameters
 
@@ -35,7 +35,7 @@ The name of the repository. The name is not case sensitive.
 Secure hashing algorithm
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Models.Blob 'GithubClient.Models.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Git.Blob.md 'GithubClient.Git.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
 A blob object
 
 ### See Also

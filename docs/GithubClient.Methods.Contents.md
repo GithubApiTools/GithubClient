@@ -1,5 +1,5 @@
-#### [GithubClient](index 'index')
-### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods')
+#### [GithubClient](index.md 'index')
+### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods')
 
 ## Contents Class
 
@@ -13,7 +13,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [GetContents(string, DirectoryContent)](GithubClient.Methods.Contents.GetContents(string,GithubClient.Models.DirectoryContent) 'GithubClient.Methods.Contents.GetContents(string, GithubClient.Models.DirectoryContent)') | Returns a content object from the Github API |
-| [GetContents(string, Repository, string)](GithubClient.Methods.Contents.GetContents(string,GithubClient.Models.Repository,string) 'GithubClient.Methods.Contents.GetContents(string, GithubClient.Models.Repository, string)') | Returns a content object from the Github API |
-| [GetContents(string, string, string)](GithubClient.Methods.Contents.GetContents(string,string,string) 'GithubClient.Methods.Contents.GetContents(string, string, string)') | Returns a content object from the Github API |
-| [GetFile(string, DirectoryContent)](GithubClient.Methods.Contents.GetFile(string,GithubClient.Models.DirectoryContent) 'GithubClient.Methods.Contents.GetFile(string, GithubClient.Models.DirectoryContent)') | Returns a content object from the Github API |
+| [GetContents(string, ContentDirectory)](GithubClient.Methods.Contents.GetContents(string,GithubClient.Repositories.ContentDirectory).md 'GithubClient.Methods.Contents.GetContents(string, GithubClient.Repositories.ContentDirectory)') | Returns a content object from the Github API |
+| [GetContents(string, Repository, string)](GithubClient.Methods.Contents.GetContents(string,GithubClient.Repositories.Repository,string).md 'GithubClient.Methods.Contents.GetContents(string, GithubClient.Repositories.Repository, string)') | Returns a content object from the Github API |
+| [GetContents(string, string, string)](GithubClient.Methods.Contents.GetContents(string,string,string).md 'GithubClient.Methods.Contents.GetContents(string, string, string)') | Returns a content object from the Github API |
+| [GetFile(string, ContentDirectory)](GithubClient.Methods.Contents.GetFile(string,GithubClient.Repositories.ContentDirectory).md 'GithubClient.Methods.Contents.GetFile(string, GithubClient.Repositories.ContentDirectory)') | Returns a content object from the Github API |

@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using System.Net.Http.Headers;
-using GithubClient.Models;
+using GithubClient.Git;
+using GithubClient.Repositories;
 
 namespace GithubClient.Methods
 {
@@ -27,7 +28,7 @@ namespace GithubClient.Methods
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Blob.GetHeader()));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
-            Task<Stream> Response = client.GetStreamAsync(Blob.GetApiUrl(Owner, Name, Sha));
+            Task<Stream> Response = client.GetStreamAsync(Blob.GetEndpoint(Owner, Name, Sha));
             return JsonSerializer.Deserialize<Blob>(await Response);
         }
         /// <summary>
@@ -37,7 +38,7 @@ namespace GithubClient.Methods
         /// <param name="PAT">Personal Access Token</param>
         /// <param name="content">The contents of a file or directory in a repository.</param>
         /// <returns>A blob object</returns>
-        public static async Task<Blob>? GetBlob(string PAT, DirectoryContent content)
+        public static async Task<Blob>? GetBlob(string PAT, ContentDirectory content)
         {
             HttpClient client = new()
             {
@@ -72,8 +73,7 @@ namespace GithubClient.Methods
             client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
             if (tree.Url != null)
             {
-                string RequestUrl = tree.Url;
-                Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
+                Task<Stream> Response = client.GetStreamAsync(tree.Url);
                 return JsonSerializer.Deserialize<Blob>(await Response);
             }
             return null;
