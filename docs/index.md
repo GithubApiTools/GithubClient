@@ -4,5 +4,6 @@
 
 | Namespaces | |
 | :--- | :--- |
+| [GithubClient.Git](GithubClient.Git 'GithubClient.Git') | |
 | [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods') | |
-| [GithubClient.Models](GithubClient.Models 'GithubClient.Models') | |
+| [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories') | |

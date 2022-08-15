@@ -13,5 +13,5 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [GetTree(string, string, Repository, string, bool)](GithubClient.Methods.Trees.GetTree(string,string,GithubClient.Models.Repository,string,bool) 'GithubClient.Methods.Trees.GetTree(string, string, GithubClient.Models.Repository, string, bool)') | Returns a repository Tree from the Github API |
-| [GetTree(string, string, string, string, string)](GithubClient.Methods.Trees.GetTree(string,string,string,string,string) 'GithubClient.Methods.Trees.GetTree(string, string, string, string, string)') | Returns a repository Tree from the Github API |
+| [GetTree(string, Repository, string, bool)](GithubClient.Methods.Trees.GetTree(string,GithubClient.Repositories.Repository,string,bool) 'GithubClient.Methods.Trees.GetTree(string, GithubClient.Repositories.Repository, string, bool)') | Returns a repository Tree from the Github API |
+| [GetTree(string, string, string, string)](GithubClient.Methods.Trees.GetTree(string,string,string,string) 'GithubClient.Methods.Trees.GetTree(string, string, string, string)') | Returns a repository Tree from the Github API |
