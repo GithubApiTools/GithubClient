@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[ContentDirectory](GithubClient.Repositories.ContentDirectory.md 'GithubClient.Repositories.ContentDirectory')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')
 
 ## ContentDirectory.GetHeader() Method
 
@@ -10,5 +10,5 @@ public static string GetHeader();
 ```
 
 #### Returns
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')  
+[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 The recommended header

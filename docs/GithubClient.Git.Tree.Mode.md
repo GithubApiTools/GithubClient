@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Git](GithubClient.Git.md 'GithubClient.Git').[Tree](GithubClient.Git.Tree.md 'GithubClient.Git.Tree')
+#### [GithubClient](index 'index')
+### [GithubClient.Git](GithubClient.Git 'GithubClient.Git').[Tree](GithubClient.Git.Tree 'GithubClient.Git.Tree')
 
 ## Tree.Mode Property
 

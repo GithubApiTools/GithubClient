@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[Links](GithubClient.Repositories.Links.md 'GithubClient.Repositories.Links')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[Links](GithubClient.Repositories.Links 'GithubClient.Repositories.Links')
 
 ## Links.Self Property
 

@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents.md 'GithubClient.Methods.Contents')
+#### [GithubClient](index 'index')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Contents](GithubClient.Methods.Contents 'GithubClient.Methods.Contents')
 
 ## Contents.GetFile(string, ContentDirectory) Method
 
@@ -18,12 +18,12 @@ Personal Access Token
 
 <a name='GithubClient.Methods.Contents.GetFile(string,GithubClient.Repositories.ContentDirectory).content'></a>
 
-`content` [ContentDirectory](GithubClient.Repositories.ContentDirectory.md 'GithubClient.Repositories.ContentDirectory')
+`content` [ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')
 
 A DirectoryContent object
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A FileContent object
 
 ### See Also

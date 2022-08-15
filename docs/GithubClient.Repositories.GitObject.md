@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories')
 
 ## GitObject Class
 
@@ -11,15 +11,15 @@ public class GitObject
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; GitObject
 
-Derived  
-&#8627; [ContentDirectory](GithubClient.Repositories.ContentDirectory.md 'GithubClient.Repositories.ContentDirectory')  
-&#8627; [ContentFile](GithubClient.Repositories.ContentFile.md 'GithubClient.Repositories.ContentFile')  
-&#8627; [Owner](GithubClient.Repositories.Owner.md 'GithubClient.Repositories.Owner')  
-&#8627; [Repository](GithubClient.Repositories.Repository.md 'GithubClient.Repositories.Repository')
+Derived
+&#8627; [ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')
+&#8627; [ContentFile](GithubClient.Repositories.ContentFile 'GithubClient.Repositories.ContentFile')
+&#8627; [Owner](GithubClient.Repositories.Owner 'GithubClient.Repositories.Owner')
+&#8627; [Repository](GithubClient.Repositories.Repository 'GithubClient.Repositories.Repository')
 
 ### See Also
 - [Repositories](https://docs.github.com/en/rest/repos 'https://docs.github.com/en/rest/repos')
 
 | Properties | |
 | :--- | :--- |
-| [Url](GithubClient.Repositories.GitObject.Url.md 'GithubClient.Repositories.GitObject.Url') | Github API Url for this object |
+| [Url](GithubClient.Repositories.GitObject.Url 'GithubClient.Repositories.GitObject.Url') | Github API Url for this object |

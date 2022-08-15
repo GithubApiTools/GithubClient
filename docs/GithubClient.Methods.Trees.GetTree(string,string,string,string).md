@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Trees](GithubClient.Methods.Trees.md 'GithubClient.Methods.Trees')
+#### [GithubClient](index 'index')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Trees](GithubClient.Methods.Trees 'GithubClient.Methods.Trees')
 
 ## Trees.GetTree(string, string, string, string) Method
 
@@ -35,7 +35,7 @@ The name of the repository. The name is not case sensitive.
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[BaseTree](GithubClient.Git.BaseTree.md 'GithubClient.Git.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[BaseTree](GithubClient.Git.BaseTree 'GithubClient.Git.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A tree object
 
 ### See Also

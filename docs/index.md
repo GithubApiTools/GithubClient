@@ -1,9 +1,9 @@
-#### [GithubClient](index.md 'index')
+#### [GithubClient](index 'index')
 
 ## GithubClient Assembly
 
 | Namespaces | |
 | :--- | :--- |
-| [GithubClient.Git](GithubClient.Git.md 'GithubClient.Git') | |
-| [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods') | |
-| [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories') | |
+| [GithubClient.Git](GithubClient.Git 'GithubClient.Git') | |
+| [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods') | |
+| [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories') | |

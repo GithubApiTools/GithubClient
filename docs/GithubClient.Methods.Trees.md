@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods')
+#### [GithubClient](index 'index')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods')
 
 ## Trees Class
 
@@ -13,5 +13,5 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [GetTree(string, Repository, string, bool)](GithubClient.Methods.Trees.GetTree(string,GithubClient.Repositories.Repository,string,bool).md 'GithubClient.Methods.Trees.GetTree(string, GithubClient.Repositories.Repository, string, bool)') | Returns a repository Tree from the Github API |
-| [GetTree(string, string, string, string)](GithubClient.Methods.Trees.GetTree(string,string,string,string).md 'GithubClient.Methods.Trees.GetTree(string, string, string, string)') | Returns a repository Tree from the Github API |
+| [GetTree(string, Repository, string, bool)](GithubClient.Methods.Trees.GetTree(string,GithubClient.Repositories.Repository,string,bool) 'GithubClient.Methods.Trees.GetTree(string, GithubClient.Repositories.Repository, string, bool)') | Returns a repository Tree from the Github API |
+| [GetTree(string, string, string, string)](GithubClient.Methods.Trees.GetTree(string,string,string,string) 'GithubClient.Methods.Trees.GetTree(string, string, string, string)') | Returns a repository Tree from the Github API |

@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Git](GithubClient.Git.md 'GithubClient.Git').[BaseTree](GithubClient.Git.BaseTree.md 'GithubClient.Git.BaseTree')
+#### [GithubClient](index 'index')
+### [GithubClient.Git](GithubClient.Git 'GithubClient.Git').[BaseTree](GithubClient.Git.BaseTree 'GithubClient.Git.BaseTree')
 
 ## BaseTree.GetApiUrl() Method
 

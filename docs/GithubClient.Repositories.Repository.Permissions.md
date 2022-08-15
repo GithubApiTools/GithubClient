@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[Repository](GithubClient.Repositories.Repository.md 'GithubClient.Repositories.Repository')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[Repository](GithubClient.Repositories.Repository 'GithubClient.Repositories.Repository')
 
 ## Repository.Permissions Property
 
@@ -10,4 +10,4 @@ public GithubClient.Repositories.Permissions? Permissions { get; set; }
 ```
 
 #### Property Value
-[Permissions](GithubClient.Repositories.Permissions.md 'GithubClient.Repositories.Permissions')
+[Permissions](GithubClient.Repositories.Permissions 'GithubClient.Repositories.Permissions')

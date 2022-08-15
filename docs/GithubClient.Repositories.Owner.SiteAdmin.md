@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[Owner](GithubClient.Repositories.Owner.md 'GithubClient.Repositories.Owner')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[Owner](GithubClient.Repositories.Owner 'GithubClient.Repositories.Owner')
 
 ## Owner.SiteAdmin Property
 

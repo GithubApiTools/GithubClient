@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories')
 
 ## Permissions Class
 
@@ -13,8 +13,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Properties | |
 | :--- | :--- |
-| [Admin](GithubClient.Repositories.Permissions.Admin.md 'GithubClient.Repositories.Permissions.Admin') | Are you an admin |
-| [Maintain](GithubClient.Repositories.Permissions.Maintain.md 'GithubClient.Repositories.Permissions.Maintain') | Are you a maintainer |
-| [Pull](GithubClient.Repositories.Permissions.Pull.md 'GithubClient.Repositories.Permissions.Pull') | Can you pull |
-| [Push](GithubClient.Repositories.Permissions.Push.md 'GithubClient.Repositories.Permissions.Push') | Can you push |
-| [Triage](GithubClient.Repositories.Permissions.Triage.md 'GithubClient.Repositories.Permissions.Triage') | Can you triage |
+| [Admin](GithubClient.Repositories.Permissions.Admin 'GithubClient.Repositories.Permissions.Admin') | Are you an admin |
+| [Maintain](GithubClient.Repositories.Permissions.Maintain 'GithubClient.Repositories.Permissions.Maintain') | Are you a maintainer |
+| [Pull](GithubClient.Repositories.Permissions.Pull 'GithubClient.Repositories.Permissions.Pull') | Can you pull |
+| [Push](GithubClient.Repositories.Permissions.Push 'GithubClient.Repositories.Permissions.Push') | Can you push |
+| [Triage](GithubClient.Repositories.Permissions.Triage 'GithubClient.Repositories.Permissions.Triage') | Can you triage |

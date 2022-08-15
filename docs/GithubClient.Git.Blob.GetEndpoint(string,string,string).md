@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Git](GithubClient.Git.md 'GithubClient.Git').[Blob](GithubClient.Git.Blob.md 'GithubClient.Git.Blob')
+#### [GithubClient](index 'index')
+### [GithubClient.Git](GithubClient.Git 'GithubClient.Git').[Blob](GithubClient.Git.Blob 'GithubClient.Git.Blob')
 
 ## Blob.GetEndpoint(string, string, string) Method
 

@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories')
 
 ## Links Class
 
@@ -13,6 +13,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Properties | |
 | :--- | :--- |
-| [Git](GithubClient.Repositories.Links.Git.md 'GithubClient.Repositories.Links.Git') | Github API Url for this objects blob |
-| [Html](GithubClient.Repositories.Links.Html.md 'GithubClient.Repositories.Links.Html') | A Url to view this object in a browser |
-| [Self](GithubClient.Repositories.Links.Self.md 'GithubClient.Repositories.Links.Self') | Github API Url for this object |
+| [Git](GithubClient.Repositories.Links.Git 'GithubClient.Repositories.Links.Git') | Github API Url for this objects blob |
+| [Html](GithubClient.Repositories.Links.Html 'GithubClient.Repositories.Links.Html') | A Url to view this object in a browser |
+| [Self](GithubClient.Repositories.Links.Self 'GithubClient.Repositories.Links.Self') | Github API Url for this object |

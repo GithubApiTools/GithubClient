@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[Permissions](GithubClient.Repositories.Permissions.md 'GithubClient.Repositories.Permissions')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[Permissions](GithubClient.Repositories.Permissions 'GithubClient.Repositories.Permissions')
 
 ## Permissions.Triage Property
 

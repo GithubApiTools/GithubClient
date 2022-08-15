@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[ContentDirectory](GithubClient.Repositories.ContentDirectory.md 'GithubClient.Repositories.ContentDirectory')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')
 
 ## ContentDirectory.Links Property
 
@@ -10,4 +10,4 @@ public GithubClient.Repositories.Links? Links { get; set; }
 ```
 
 #### Property Value
-[Links](GithubClient.Repositories.Links.md 'GithubClient.Repositories.Links')
+[Links](GithubClient.Repositories.Links 'GithubClient.Repositories.Links')

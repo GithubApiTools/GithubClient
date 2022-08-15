@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Repositories](GithubClient.Repositories.md 'GithubClient.Repositories').[ContentFile](GithubClient.Repositories.ContentFile.md 'GithubClient.Repositories.ContentFile')
+#### [GithubClient](index 'index')
+### [GithubClient.Repositories](GithubClient.Repositories 'GithubClient.Repositories').[ContentFile](GithubClient.Repositories.ContentFile 'GithubClient.Repositories.ContentFile')
 
 ## ContentFile.GitUrl Property
 

@@ -1,5 +1,5 @@
-#### [GithubClient](index.md 'index')
-### [GithubClient.Methods](GithubClient.Methods.md 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs.md 'GithubClient.Methods.Blobs')
+#### [GithubClient](index 'index')
+### [GithubClient.Methods](GithubClient.Methods 'GithubClient.Methods').[Blobs](GithubClient.Methods.Blobs 'GithubClient.Methods.Blobs')
 
 ## Blobs.GetBlob(string, Tree) Method
 
@@ -18,12 +18,12 @@ Personal Access Token
 
 <a name='GithubClient.Methods.Blobs.GetBlob(string,GithubClient.Git.Tree).tree'></a>
 
-`tree` [Tree](GithubClient.Git.Tree.md 'GithubClient.Git.Tree')
+`tree` [Tree](GithubClient.Git.Tree 'GithubClient.Git.Tree')
 
 Object specifying a tree structure.
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Git.Blob.md 'GithubClient.Git.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')  
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Git.Blob 'GithubClient.Git.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A blob object
 
 ### See Also
