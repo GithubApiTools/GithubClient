@@ -1,10 +1,37 @@
-﻿using System.Text.Json;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using GithubClient.Git;
 using GithubClient.Repositories;
+using System.Net.Http.Json;
+using System.Xml.Linq;
 
 namespace GithubClient.Methods
 {
+    internal class TreeClient
+    {
+        private readonly HttpClient _httpClient;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="httpClient"></param>
+        /// <param name="baseAddress"></param>
+        /// <param name="header"></param>
+        /// <param name="pat"></param>
+        public TreeClient(HttpClient httpClient, Uri baseAddress, string header, string pat)
+        {
+            _httpClient = httpClient;
+            _httpClient.BaseAddress = baseAddress;
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(header));
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "Github Api TreeClient");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", pat);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="endpoint"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<BaseTree>> GetStreamAsync(Uri endpoint) =>
+            await _httpClient.GetFromJsonAsync<IEnumerable<BaseTree>>(endpoint);
+    }
     /// <summary>
     /// A Collection of methods for working with Tree objects in the Github API
     /// </summary>
@@ -19,17 +46,11 @@ namespace GithubClient.Methods
         /// <param name="Name">The name of the repository. The name is not case sensitive.</param>
         /// <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
         /// <returns>A tree object</returns>
-        public static async Task<BaseTree> GetTree(string PAT, string Owner, string Name, string Ref = "main")
+        public static async Task<IEnumerable<BaseTree>>? GetTree(string PAT, string Owner, string Name, string Ref = "main")
         {
-            HttpClient client = new()
-            {
-                BaseAddress = BaseTree.GetApiUrl()
-            };
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseTree.GetHeader()));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
-            client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
-            Task<Stream> Response = client.GetStreamAsync(BaseTree.GetEndpoint(Owner, Name, Ref));
-            return JsonSerializer.Deserialize<BaseTree>(await Response);
+            TreeClient client = new(new HttpClient(), Blob.GetApiUrl(), Blob.GetHeader(), PAT);
+            IEnumerable<BaseTree> Response = await client.GetStreamAsync(BaseTree.GetEndpoint(Owner, Name, Ref));
+            return Response;
         }
         /// <summary>
         /// Returns a repository Tree from the Github API
@@ -40,20 +61,14 @@ namespace GithubClient.Methods
         /// <param name="Ref">The name of the commit/branch/tag. Default: the repository’s default branch (usually master)</param>
         /// <param name="Recursive">Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in :tree_sha</param>
         /// <returns>A tree object</returns>
-        public static async Task<BaseTree>? GetTree(string PAT, Repository repository, string Ref = "main", bool Recursive = true)
+        public static async Task<IEnumerable<BaseTree>>? GetTree(string PAT, Repository repository, string Ref = "main", bool Recursive = true)
         {
-            HttpClient client = new()
-            {
-                BaseAddress = BaseTree.GetApiUrl()
-            };
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseTree.GetHeader()));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
-            client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
+            TreeClient client = new(new HttpClient(), Blob.GetApiUrl(), Blob.GetHeader(), PAT);
             if (repository.TreesUrl != null)
             {
                 string RequestUrl = repository.TreesUrl.Replace("{/sha}", "/") + Ref + "?recursive=" + Recursive;
-                Task<Stream> Response = client.GetStreamAsync(new Uri(RequestUrl));
-                return JsonSerializer.Deserialize<BaseTree>(await Response);
+                IEnumerable<BaseTree> Response = await client.GetStreamAsync(new Uri(RequestUrl));
+                return Response;
             }
             return null;
         }

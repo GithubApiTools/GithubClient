@@ -6,7 +6,7 @@
 Returns a blob object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Git.Blob> GetBlob(string PAT, string Owner, string Name, string Sha);
+public static System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<GithubClient.Git.Blob>>? GetBlob(string PAT, string Owner, string Name, string Sha);
 ```
 #### Parameters
 
@@ -35,7 +35,7 @@ The name of the repository. The name is not case sensitive.
 Secure hashing algorithm
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[Blob](GithubClient.Git.Blob 'GithubClient.Git.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[Blob](GithubClient.Git.Blob 'GithubClient.Git.Blob')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A blob object
 
 ### See Also

@@ -6,7 +6,7 @@
 Returns a repository Tree from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<GithubClient.Git.BaseTree> GetTree(string PAT, string Owner, string Name, string Ref="main");
+public static System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<GithubClient.Git.BaseTree>>? GetTree(string PAT, string Owner, string Name, string Ref="main");
 ```
 #### Parameters
 
@@ -35,7 +35,7 @@ The name of the repository. The name is not case sensitive.
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[BaseTree](GithubClient.Git.BaseTree 'GithubClient.Git.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[BaseTree](GithubClient.Git.BaseTree 'GithubClient.Git.BaseTree')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A tree object
 
 ### See Also

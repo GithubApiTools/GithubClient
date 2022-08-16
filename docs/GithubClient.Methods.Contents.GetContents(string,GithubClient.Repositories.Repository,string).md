@@ -6,7 +6,7 @@
 Returns a content object from the Github API
 
 ```csharp
-public static System.Threading.Tasks.Task<System.Collections.Generic.List<GithubClient.Repositories.ContentDirectory>>? GetContents(string PAT, GithubClient.Repositories.Repository repository, string Ref="main");
+public static System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<GithubClient.Repositories.ContentDirectory>>? GetContents(string PAT, GithubClient.Repositories.Repository repository, string Ref="main");
 ```
 #### Parameters
 
@@ -29,7 +29,7 @@ A Repository object
 The name of the commit/branch/tag. Default: the repository’s default branch (usually master)
 
 #### Returns
-[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
+[System.Threading.Tasks.Task&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')[System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[ContentDirectory](GithubClient.Repositories.ContentDirectory 'GithubClient.Repositories.ContentDirectory')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Task-1 'System.Threading.Tasks.Task`1')
 A DirectoryContent object
 
 ### See Also

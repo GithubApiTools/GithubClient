@@ -181,6 +181,22 @@
             File size in bytes
             </summary>
         </member>
+        <member name="M:GithubClient.Methods.BlobClient.#ctor(System.Net.Http.HttpClient,System.Uri,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="httpClient"></param>
+            <param name="baseAddress"></param>
+            <param name="header"></param>
+            <param name="pat"></param>
+        </member>
+        <member name="M:GithubClient.Methods.BlobClient.GetStreamAsync(System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
+        </member>
         <member name="T:GithubClient.Methods.Blobs">
             <summary>
             A Collection of methods for working with Blob objects in the Github API
@@ -206,14 +222,21 @@
             <param name="content">The contents of a file or directory in a repository.</param>
             <returns>A blob object</returns>
         </member>
-        <member name="M:GithubClient.Methods.Blobs.GetBlob(System.String,GithubClient.Git.Tree)">
+        <member name="M:GithubClient.Methods.ContentClient.#ctor(System.Net.Http.HttpClient,System.Uri,System.String,System.String)">
             <summary>
-            Returns a blob object from the Github API
+            
             </summary>
-            <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blob</seealso>
-            <param name="PAT">Personal Access Token</param>
-            <param name="tree">Object specifying a tree structure.</param>
-            <returns>A blob object</returns>
+            <param name="httpClient"></param>
+            <param name="baseAddress"></param>
+            <param name="header"></param>
+            <param name="pat"></param>
+        </member>
+        <member name="M:GithubClient.Methods.ContentClient.GetStreamAsync(System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
         </member>
         <member name="T:GithubClient.Methods.Contents">
             <summary>
@@ -257,6 +280,22 @@
             <param name="PAT">Personal Access Token</param>
             <param name="content">A DirectoryContent object</param>
             <returns>A FileContent object</returns>
+        </member>
+        <member name="M:GithubClient.Methods.RepoClient.#ctor(System.Net.Http.HttpClient,System.Uri,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="httpClient"></param>
+            <param name="baseAddress"></param>
+            <param name="header"></param>
+            <param name="pat"></param>
+        </member>
+        <member name="M:GithubClient.Methods.RepoClient.GetStreamAsync(System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
         </member>
         <member name="T:GithubClient.Methods.Repos">
             <summary>
@@ -315,6 +354,22 @@
             <param name="Org">The account owner of the repository. This can also be the organization name. The name is not case sensitive.</param>
             <param name="Name">The name of the repository. The name is not case sensitive.</param>
             <returns>A repository object</returns>
+        </member>
+        <member name="M:GithubClient.Methods.TreeClient.#ctor(System.Net.Http.HttpClient,System.Uri,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="httpClient"></param>
+            <param name="baseAddress"></param>
+            <param name="header"></param>
+            <param name="pat"></param>
+        </member>
+        <member name="M:GithubClient.Methods.TreeClient.GetStreamAsync(System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="endpoint"></param>
+            <returns></returns>
         </member>
         <member name="T:GithubClient.Methods.Trees">
             <summary>
