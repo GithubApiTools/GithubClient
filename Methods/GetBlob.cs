@@ -70,28 +70,5 @@ namespace GithubClient.Methods
             }
             return null;
         }
-        /// <summary>
-        /// Returns a blob object from the Github API
-        /// </summary>
-        /// <seealso href="https://docs.github.com/en/rest/git/blobs">Github Docs : Blob</seealso>
-        /// <param name="PAT">Personal Access Token</param>
-        /// <param name="tree">Object specifying a tree structure.</param>
-        /// <returns>A blob object</returns>
-        public static async Task<Blob>? GetBlob(string PAT, Tree tree)
-        {
-            HttpClient client = new()
-            {
-                BaseAddress = Blob.GetApiUrl()
-            };
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(Blob.GetHeader()));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", PAT);
-            client.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
-            if (tree.Url != null)
-            {
-                Task<Stream> Response = client.GetStreamAsync(tree.Url);
-                return JsonSerializer.Deserialize<Blob>(await Response);
-            }
-            return null;
-        }
     }
 }
