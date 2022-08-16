@@ -1,9 +1,7 @@
-﻿using System.Text.Json;
-using System.Net.Http.Headers;
+﻿using System.Net.Http.Headers;
 using GithubClient.Git;
 using GithubClient.Repositories;
 using System.Net.Http.Json;
-using System.Xml.Linq;
 
 namespace GithubClient.Methods
 {
@@ -22,7 +20,7 @@ namespace GithubClient.Methods
             _httpClient = httpClient;
             _httpClient.BaseAddress = baseAddress;
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(header));
-            _httpClient.DefaultRequestHeaders.Add("User-Agent", "Github Api Client");
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "Github Api BlobClient");
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("token", pat);
         }
         /// <summary>
